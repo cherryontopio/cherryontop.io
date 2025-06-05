@@ -1,0 +1,47 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* space between items */
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  background-color: rgba(199, 199, 199, 0.9);
+  padding: 40px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Shared item spacing for individual blocks */
+.footer-title,
+.footer-logo,
+.footer-text {
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo styles */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.f-logo {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+.f-title {
+  font-family: "Rock Salt", cursive; /* Explicitly set Rock Salt */
+}
+
+/* Title font */
+.footer-title {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Rock Salt", cursive !important;
+  text-transform: lowercase;
+}

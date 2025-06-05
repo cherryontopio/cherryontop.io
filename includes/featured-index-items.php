@@ -1,0 +1,153 @@
+<?php
+// Define the featured posts array with a date field
+$featured_posts = [
+     [
+        'image' => '/assets/images/website-management.webp',
+        'alt' => 'cherryontop.io homepage',
+        'title' => 'Why You Should Hire a Human to Manage Your Website',
+        'link' => '/blog/2025/May/why-use-human-web-admin.php',
+        'date' => '2025-05-20',
+        'description' => '',
+        'post_count' => '',        
+    ],
+     [
+        'image' => '/assets/images/Google-Analytics.webp',
+        'alt' => 'Google Analytics graphs',
+        'title' => 'How to Set Up Google Analytics on Your Webpage',
+        'description' => '',
+        'date' => '2025-05-14',
+        'post_count' => '',
+        'link' => '/blog/2025/May/how-to-setup-google-analytics-website.php',
+    
+    ],
+    [
+        'image' => '/assets/images/person-on-beach-reading-book.webp',
+        'alt' => 'a person lying on a beach reading a book',
+        'title' => '8 Techniques to Achieve Your Goals',
+        'description' => '',
+        'date' => '2025-05-14',
+        'link' => '/blog/2025/May/how-to-achieve-your-goals.php',
+        'hidden' => true,
+    ],
+    [
+        'image' => '/assets/images/we-can.webp',
+        'alt' => 'sign We Can',
+        'title' => 'The Importance of Positive Thinking',
+        'link' => '/blog/2025/May/role-of-positive-thinking-in-success.php',
+        'description' => 'The role of positive thinking in achieving success',
+        'date' => '2025-05-14'
+    ],
+    [
+        'image' => '/assets/images/fleas-in-a-jar.webp',
+        'alt' => 'fleas in a jar for experiment',
+        'title' => 'The Flea in a Jar Experiment',
+        'link' => '/blog/2025/May/flea-in-jar.php',
+        'description' => 'Is the famous Fleas in a Jar Experiment true?',
+        'date' => '2025-05-14'         
+    ],
+    [
+        'image' => '/assets/images/Boothe-as-Marlowe.webp',
+        'alt' => 'Powers Boothe as Philip Marlowe, PI',
+        'title' => 'The Sharp Wit of Raymond Chandler',
+        'link' => '/blog/2025/May/raymond-chandler-quotes.php',
+        "description" => "From The Man Who Defined a Genre",
+        'date' => '2025-05-13' 
+    ],
+    [
+        'image' => '/assets/images/writers-toolbox.webp',
+        'alt' => 'writers tools',
+        'title' => 'The Skills Every Writer Needs',
+        'link' => '/blog/2025/May/stephen-king-on-writing.php',
+        "description" => "The wisdom from Stephen King's Writer's Toolbox.",
+        'date' => '2025-05-13',
+        'hidden' => true,
+    ],
+    [
+        'image' => '/assets/images/Raymond_Chandler.webp',
+        'alt' => 'black and white photo of Raymond Chandler holding his cat',
+        'title' => 'The Wisdom of Raymond Chandler',
+        'link' => '/blog/2025/May/raymond-chandler-on-writing.php',
+        "description" => "A few quotes on writing by my favourite author, Raymond Chandler.",
+        'date' => '2025-05-13',
+        'hidden' => true,
+    ],
+    [
+        'image' => '/assets/images/communication-skills.webp',
+        'alt' => 'man shouting into an amplifier',
+        'title' => 'The Skills No Developer Can Do Without',
+        'link' => '/blog/2025/May/skills-no-developer-can-do-without.php',
+        "description" => "Being a web developer isn’t just about smashing code until the browser behaves.",
+        'date' => '2025-05-13' 
+    ],
+    [       
+        "image" => "/assets/images/coding-mobile-app.webp",
+        "alt" => "Laptop with code and mobile app",
+        "title" => "Web Design vs Web Development",
+        "link" => "/blog/2025/May/web-design-development.php",
+        "description" => "In today’s digital world, the terms web design and web development are often used interchangeably.",
+        "date" => "2025-05-02"
+    ],
+    [
+        "image" => "/assets/images/laughing-spring.webp",
+        "alt" => "yellow spring laughing",
+        "title" => "Will AI Ever Be Sarcastic?",
+        "link" => "/blog/2025/May/ai-humor-sarcastic.php",
+        "description" => "Pondering about the future: Will AI ever be like a good-humoured grandpa to us?",
+        "date" => "2025-05-01"
+    ],  
+    [
+        "image" => "/assets/images/coffee-art.webp",
+        "alt" => "coffee being poured into a cup with coffee art",
+        "title" => "From Café Assistant to Software Developer",
+        "link" => "/blog/2025/May/cafe-assistant-software-developer-success-story.php",
+        "description" => "A personal journey from working as a café assistant to becoming a software developer...",
+        "date" => "2025-05-04"
+    ],
+    [
+        "image" => "/assets/images/passport-hat.webp",
+        "alt" => "a passport and a hat positioned on a map",
+        "title" => "The Stories of the Imperfect Perfectionist",
+        "link" => "/blog/2025/May/imperfect-perfectionist-stories.php",
+        "description" => "I set out with a promise to myself — to write about the places I visited every day.",
+        "date" => "2025-05-05"
+    ],
+    [
+        "image" => "/assets/images/bristol.webp",
+        "alt" => "Bristol landscape",
+        "title" => "Bristol Stole My Heart",
+        "link" => "/blog/2025/May/bristol-creativity-cider-views.php",
+        "description" => "Bristol is a vibrant town sitting in the southwest of England,...",
+        "date" => "2025-05-01"  
+    ]
+];
+
+// Sort posts by date (newest first)
+usort($featured_posts, function ($a, $b) {
+    return strtotime($b['date']) - strtotime($a['date']);
+});
+
+?>
+<div class="featured-index-container">
+    <?php 
+    $count = 0; // Initialize counter
+    foreach ($featured_posts as $post):
+        if (isset($post['hidden']) && $post['hidden']) {
+            continue; // Skip hidden posts
+        }
+        if ($count >= 5) {
+            break; // Stop after displaying 5 posts
+        }
+        $count++; // Increment counter
+    ?>
+        <div class="featured-index-item">
+        <a href="<?= $post["link"] ?>" class="featured-index-link">
+        <img src="<?= htmlspecialchars($post["image"]) ?>" alt="<?= htmlspecialchars($post["alt"]) ?>">
+    <div class="featured-index-content">
+        <h3 class="featured-index-title"><?= $post["title"] ?></h3>
+        <p class="featured-index-description"><?= $post["description"] ?></p>
+    </div>
+</a>
+
+        </div>
+    <?php endforeach; ?>
+</div>

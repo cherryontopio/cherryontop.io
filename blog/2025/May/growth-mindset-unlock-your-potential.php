@@ -1,0 +1,137 @@
+
+<?php 
+include dirname(__DIR__, 3) . '/includes/header.php';
+?>
+
+<?php
+$pageTitle = "Blog Post";
+
+
+// Get the current date
+$publishDate = date('Y-m-d');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+</head>
+
+<body>
+
+
+  <section class="blog-section">
+      <!-- Blog Main Content -->
+      <main class="blog-main container">
+        <!-- Full-Width Title -->
+        <h2 class="post-title-fullwidth">Growth Mindset: Unlocking Your Potential</h2>
+
+        <!-- Blog and Sidebar Wrapper -->
+        <div class="content-wrapper">
+          <!-- Main Blog Post -->
+          <article class="blog-post">
+            
+            <img src="/assets/images/see-the-good.webp" alt="a person holding a cup saying: See the Good" class="post-image" />
+            <h3 class="blog-subtitle">Positive Thinking Miniseries</h3> 
+            <!-- Insert the dynamic publish date here -->
+             <p class="post-meta">Published on <?php echo date('F j, Y', strtotime($publishDate)); ?> • by <img class="cherry-icon" src="/assets/images/favicon.webp" style="height: 20px; vertical-align: middle;" alt="icon" alt="a cherry"></p>
+            <p class="post-meta">
+    in 
+    <span class="post-categories">
+        <a hidden href="/category/tech.php" class="post-category">tech</a>
+        <a hidden href="/category/digital.php" class="post-category"> digital  </a>
+        <a  href="/category/mindset.php" class="post-category"> mindset</a>
+        <a hidden href="/category/stories.php" class="post-category"> stories  </a>
+        <a hidden href="/category/travels.php" class="post-category"> travels</a>
+        <a hidden href="/category/wordcraft.php" class="post-category"> wordcraft  </a>
+    </span>
+</p>
+
+            
+            <div class="post-content">
+               <?php include dirname(__DIR__, 3) . '/includes/social-share.php'; ?> 
+                
+              <p>A growth mindset is the belief that intelligence and abilities can be developed through dedication and effort. <strong>Carol Dweck</strong>'s research shows that people with a growth mindset achieve more because they embrace challenges and see failure as a springboard for growth.</p>
+    <p>By believing that your qualities can be cultivated, you’re more likely to take initiative, embrace effort, and persevere in the face of setbacks.</p>
+    <h2>Steps to Cultivate a Growth Mindset</h2>
+    <ol>
+        <li>Embrace challenges: They are opportunities to learn.</li>
+        <li>Learn from criticism: Constructive feedback helps you grow.</li>
+        <li>Celebrate others’ success: It inspires you rather than threatens you.</li>
+    </ol>
+    <p>Change your inner narrative. Instead of saying, "I can't do this," add the word "yet." This small shift opens the door to possibility and persistence.</p>
+    <p>Explore more about this concept on <a href="https://www.mindsetworks.com/science/" target="_blank">MindsetWorks</a>, founded by Carol Dweck.</p>
+    <h3 class="miniseries">Read more in my miniseries: </h3>
+<ol>
+<li>
+<a href="/blog/2025/May/positive-thinking-miniseries/power-positive-thinking.php" >The Power of Positive Thinking</a>
+</li>
+<li>
+<a href="/blog/2025/May/positive-thinking-miniseries/growth-mindset-unlock-your-potential.php" >Growth Mindset: Unlocking Your Potential</a>
+</li>
+<li>
+<a href="/blog/2025/May/positive-thinking-miniseries/affirmations-rewire-brain.php" >The Science of Affirmations: Rewire Your Brain</a>
+</li>
+<li>
+<a href="/blog/2025/May/positive-thinking-miniseries/goal-setting-mindset.php" >Mindset and Goal Setting: A Winning Combo</a>
+</li>
+<li>
+<a href="/blog/2025/May/positive-thinking-miniseries/mindset-shaping-environment.php" >The Role of Your Environment in Shaping Mindset</a>
+</li>
+<li>
+<a href="/blog/2025/May/positive-thinking-miniseries/morning-routines-success.php" >Morning Routines for a Winning Mindset</a>
+</li>
+<li>
+<a href="/blog/2025/May/positive-thinking-miniseries/overcoming-limiting-beliefs.php" >Overcoming Limiting Beliefs</a>
+</li>
+<li>
+<a href="/blog/2025/May/positive-thinking-miniseries/reframing-failure-feedback.php" >Reframing Failure as Feedback</a>
+</li>
+<li>
+<a href="/blog/2025/May/positive-thinking-miniseries/selftalk-shapes-reality.php" >How Self-Talk Shapes Your Reality</a>
+</li>
+<li>
+<a href="/blog/2025/May/positive-thinking-miniseries/visualisation-techniques.php" >Visualisation Techniques That Work</a>
+</li>
+</ol>
+              <img src="/assets/images/" alt="" class="inpost-image">
+
+              
+              <!-- Add more content here -->
+            </div>
+            <div>
+          </div>
+          <br>
+          <div class="divider"></div>
+          <div class="donate-link">
+          <?php include dirname(__DIR__, 3) . '/includes/paypal.php'; ?>
+        </div>
+        
+</article>
+          
+
+            <!-- Sidebar Section -->
+            <?php include $_SERVER['DOCUMENT_ROOT'] . "/blog/sidebar.php"; ?>
+        </div>
+        
+     <!-- FEATURED ITEMS SECTION -->
+
+     <?php include dirname(__DIR__, 3) . '/includes/featured-index-items.php'; ?>
+
+<!-- FEATURED ITEMS END -->
+
+
+      </main>
+ 
+  </section>
+  <?php 
+$footerPath = dirname(__DIR__, 3) . '/includes/footer.php';
+if (file_exists($footerPath)) {
+    include $footerPath;
+} else {
+    echo "<p style='color: red;'>Error: Footer file not found!</p>";
+}
+?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ 
+</body>
+</html>

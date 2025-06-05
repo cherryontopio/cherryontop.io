@@ -1,0 +1,2340 @@
+/* BODY AND MARGIN */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(239, 239, 239);
+}
+
+.front-page-body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  height: 100%;
+}
+
+/* HERO */
+.hero {
+  margin-top: 0;
+  padding-top: 100px;
+  height: 110vh;
+  background-image: url(/assets/images/CoderCat.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1; /* Make sure it's below header */
+}
+
+/* Hero image resizing for mobile (landscape) */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .hero {
+    height: 130vh; /* Increase height to fit all content */
+    background-size: cover; /* Keep the background properly scaled */
+    background-position: center; /* Keep image centered */
+  }
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-top: 150px;
+}
+
+.subtitle {
+  font-size: 50px;
+}
+
+.centered-p {
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: darkred;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 1px 30px 30px 1px;
+}
+
+.search-bar button:hover {
+  background-color: darkolivegreen;
+}
+
+/* Hero Content (text in the center of hero) */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000; /* Black text */
+  text-align: center;
+  z-index: 3; /* Ensures content is above the overlay */
+  line-height: 1.5; /* Reduce line spacing */
+  max-width: 90%; /* Ensures content doesn't stretch too wide */
+  width: 70%; /* Make sure it takes up full width up to the max-width */
+  padding-top: 50px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 80px;
+}
+
+/* Remove default margins of h1 and p */
+.hero-content h1,
+.hero-content p {
+  margin: 0;
+  z-index: 50;
+}
+
+/* Add small margin between h1 and p */
+.hero-content h1 {
+  margin-bottom: 5px;
+}
+
+.hero-content p {
+  margin-top: 5px;
+}
+
+/* Search bar styling */
+/* Adjust the search bar */
+.hero-content .search-bar {
+  width: 35%; /* Set the width to 25% of the container (about 1/4 of the page width) */
+  margin-top: 50px;
+  margin-left: auto; /* Center the search bar horizontally */
+  margin-right: auto; /* Center the search bar horizontally */
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .hero-content {
+    position: absolute;
+    top: 60%; /* Adjust the vertical positioning */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh; /* Increase height slightly for balance */
+    padding: 20px;
+  }
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .hero-content {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 70vh; /* Increased height for better spacing */
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.8em, 7vw, 3.5em); /* Even bigger title */
+    margin-bottom: 15px;
+  }
+
+  .hero-content p {
+    font-size: clamp(1.4em, 5.5vw, 2.1em); /* Bigger subtitle */
+    margin-bottom: 25px;
+  }
+
+  .hero-content .search-bar {
+    width: 100%;
+    max-width: 450px; /* Slightly larger max width */
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content {
+    position: absolute;
+    top: 50%; /* Moves content higher */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Proper vertical centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 90%; /* Ensures content does not shrink too much */
+    min-height: unset; /* Prevent excessive height */
+    height: auto; /* Allow flexibility */
+    padding: 20px 0; /* Reduces extra padding */
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3em, 9vw, 3.8em); /* Bigger title */
+    margin-bottom: 8px;
+  }
+
+  .hero-content p {
+    font-size: clamp(2em, 7vw, 2.5em); /* Improved readability */
+    margin-bottom: 12px;
+  }
+}
+
+/* HERO END  */
+
+/* INDEX.PHP - FRONT PAGE CONTENT */
+.front-sections-headings {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* CATEGORIES CONTAINER */
+.categories-container {
+  display: flex;
+  justify-content: space-between; /* space out the items evenly */
+  gap: 20px; /* space between each item */
+  flex-wrap: wrap; /* Ensure it wraps in smaller screens */
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 90px;
+  margin-top: 10px;
+}
+
+/* Categories meta (category name and post count) */
+.categories-meta {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between; /* Space between the category name and post count */
+  align-items: center;
+  width: 100%;
+  margin-top: 10px; /* Optional: Space above meta */
+}
+
+.categories-meta span {
+  flex: 1; /* Allow both spans to take up available space */
+}
+
+/* Optional: Adjust last item's flex if it's still behaving strangely */
+.categories-container .categories-item:last-child {
+  flex: 1 1 calc(16.66% - 20px); /* Keep the same size as others */
+  max-width: calc(16.66% - 20px);
+}
+
+/* Each categories item */
+.categories-item {
+  flex: 1 1 calc(16.66% - 20px); /* 6 items per row, subtracting gap */
+  max-width: calc(16.66% - 20px); /* Ensure no items stretch past this */
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px; /* Space below each item */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Added shadow */
+}
+
+/* Categories image styling */
+.categories-item img {
+  width: 100%; /* Ensures the image takes up the full width of the container */
+  height: 100%; /* Make the image fill the container vertically */
+  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition for zoom and shadow */
+}
+
+/* Hover effect on categories image */
+.categories-item:hover img {
+  transform: scale(1.1); /* Zoom in slightly */
+  border-radius: 10px;
+}
+
+/* Categories info container */
+.categories-info {
+  position: absolute; /* So it can be positioned above the image */
+  bottom: 0; /* Position at the bottom of the container */
+  left: 0;
+  width: 100%;
+  padding-bottom: 10px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: dark semi-transparent background for better readability */
+  color: white; /* White text for contrast */
+  text-align: center; /* Center-align the text horizontally */
+  /* Flexbox properties to ensure perfect centering */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically if needed */
+}
+
+/* Categories heading styling */
+.categories-heading {
+  font-size: 1.25rem; /* Slightly larger text for the heading */
+  font-weight: bold;
+  margin: 0;
+  color: #333; /* Dark color for heading */
+}
+
+/* Categories excerpt styling */
+.categories-excerpt {
+  font-size: 1rem;
+  color: #666; /* Lighter color for excerpt */
+  margin: 10px 0 0;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .categories-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .categories-item {
+    width: 100%; /* Take full width */
+    max-width: 60%; /* Prevent shrinking */
+    flex: none; /* Remove Flexbox behavior */
+    height: auto; /* Allow height to adjust */
+    margin: 0; /* Reset margin */
+  }
+
+  .categories-item:hover {
+    transform: none; /* Disable scaling for smaller screens */
+    width: 80%; /* Ensure it fits within the screen width */
+
+    height: auto; /* Dynamically adjust height */
+  }
+
+  .categories-container .categories-item:last-child {
+    width: 100%; /* Explicit width for consistency */
+    max-width: 60%;
+    flex: none; /* Ensure the last item behaves like the others */
+  }
+}
+/* CATEGORIES CONTAINER END */
+
+/* POST CONTAINER */
+
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 90px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 10px;
+}
+
+/* Default: 3 posts per row */
+.post-item {
+  flex: 1 1 calc(33.333% - 13.333px); /* 3 in a row, accounting for gaps */
+  max-width: calc(33.333% - 13.333px);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Added shadow */
+}
+
+/* Post image styling */
+.post-item img {
+  aspect-ratio: 4/3;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 5px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Hover effect on post image */
+.post-item:hover img {
+  transform: scale(1.1); /* Zoom in slightly */
+  box-shadow: 5px black; /* Optional shadow effect for hover */
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Overlay text container */
+.post-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+  border-radius: 0 0 10px 10px; /* match the bottom of the card */
+}
+
+/* Optional: make text easier to read */
+.post-heading {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.post-excerpt {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Medium screens: 2 posts per row */
+@media (max-width: 900px) {
+  .post-item {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Small screens: 1 post per row */
+@media (max-width: 600px) {
+  .post-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    height: 200px;
+  }
+}
+
+/* POST CONTAINER END */
+
+/* GRID CONTAINER */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /* 5 equal columns for larger screens */
+  gap: 20px; /* Space between items */
+  padding: 0 50px;
+  margin-bottom: 90px;
+  margin-top: 10px;
+}
+
+.grid-item {
+  overflow: hidden;
+  text-align: center;
+  border-radius: 10px; /* Ensures the zoomed image stays within rounded bounds */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Ensures all images fill and crop properly */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Added shadow */
+}
+
+/* Hover effect on grid image */
+.grid-item:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid info container */
+.grid-info {
+  margin-top: 15px;
+}
+
+/* Grid heading styling */
+.grid-heading {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  color: #333;
+}
+
+/* Grid excerpt styling */
+.grid-excerpt {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 30px; /* Add spacing between items */
+    padding: 0; /* Reduce padding for smaller screens */
+    justify-content: center; /* Center grid items */
+    margin: 0 auto; /* Center the entire grid-container */
+    width: 100%; /* Ensure it fits within the screen */
+    max-width: 600px; /* Optional: Limit maximum width for better aesthetics */
+  }
+
+  .grid-item {
+    width: 50%; /* Make items 50% wide */
+    margin: 0 auto; /* Center items horizontally */
+    height: auto; /* Allow height to adjust dynamically */
+    text-align: center; /* Center align content */
+  }
+
+  .grid-item img {
+    width: 100%; /* Ensure the image fits within the grid item */
+    height: 200px; /* Adjust image height responsively */
+    border-radius: 10px;
+  }
+
+  .grid-item:hover img {
+    transform: none; /* Disable scaling for smaller screens */
+    box-shadow: none; /* Simplify visuals for smaller screens */
+  }
+}
+/* GRID END */
+
+/* INDEX PAGE FEATURED INDEX POSTS*/
+.featured-index-container {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  gap: 20px; /* Gap between items */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+  padding: 0 50px; /* Padding for container */
+  margin-top: 10px;
+  margin-bottom: 150px;
+  overflow: visible;
+}
+
+/* featured-index meta (services name and post count) */
+.featured-index-meta {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between; /* Space between the category name and post count */
+  align-items: center;
+  width: 100%;
+  margin-top: 10px; /* Optional: Space above meta */
+}
+
+.featured-index-meta span {
+  flex: 1; /* Allow both spans to take up available space */
+}
+
+/* Optional: Adjust last item's flex if it's still behaving strangely */
+.featured-index-container .featured-index-item:last-child {
+  flex: 1 1 calc(20% - 20px); /* Keep the same size as others */
+  max-width: calc(20% - 20px);
+}
+
+/* featured-index-item */
+.featured-index-item {
+  position: relative; /* Establish positioning context for children */
+  flex: 1 1 calc(20% - 20px); /* Grid layout for 3 items per row */
+  max-width: calc(20% - 20px); /* Limit max width */
+  border-radius: 10px !important; /* Rounded corners */
+  overflow: hidden; /* Prevent content spill */
+  margin-bottom: 20px; /* Space between items */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out; /* Smooth transitions */
+  z-index: 1; /* Default stacking order */
+}
+
+/* Enlarged Hover Effect */
+.featured-index-item:hover {
+  transform: scale(1.2); /* Increases the size by 1.5x */
+  z-index: 100; /* Brings it above other elements */
+}
+
+/* featured-index Image */
+.featured-index-item img {
+  aspect-ratio: 4/3;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure photo covers container */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Hover effect on featured-index image */
+.featured-index-item:hover img {
+  transform: scale(1.1); /* Zoom in slightly */
+  border-radius: 10px;
+}
+
+/* featured-index Content (Title and Description) */
+.featured-index-content {
+  position: absolute;
+  top: 0; /* Covers entire container */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Stack title and description vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center-align text */
+  box-sizing: border-box; /* Include padding in layout */
+  overflow: hidden;
+  max-height: 100%; /* Prevents overflowing outside the box */
+  transform: scale(0.95); /* Shrinks content slightly */
+  border-radius: inherit;
+}
+
+.featured-index-item:last-child {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Default State: Title */
+.featured-index-title {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: white; /* White text for readability */
+  font-size: 22px; /* Title font size */
+  font-weight: normal;
+  padding: 10px; /* Space around title */
+  border-radius: 10px; /* Rounded corners for title */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
+  text-align: center;
+  max-width: 100%;
+  font-size: clamp(
+    18px,
+    5vw,
+    26px
+  ); /* Minimum 18px, scales dynamically, max 26px */
+  line-height: 1.2; /* Reduces vertical spacing */
+}
+
+.featured-index-title:last-child {
+  border-radius: 10px !important;
+}
+
+/* Hover Effect */
+.featured-index-item:hover .featured-index-title {
+  display: none; /* Hide title on hover */
+}
+
+/* Default State: Description Hidden */
+.featured-index-description {
+  display: none; /* Hidden by default */
+  color: white; /* White text */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  padding: 15px 20px; /* Space around description */
+  font-size: 16px; /* Font size for description */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
+  font-size: clamp(14px, 4vw, 20px);
+}
+
+/* Hover State: Description Appears */
+.featured-index-item:hover .featured-index-description {
+  opacity: 1; /* Fully display the description */
+  pointer-events: auto; /* Enable interaction with description */
+  display: block; /* Show description on hover */
+  font-size: 16px;
+  padding: 10px;
+}
+
+.featured-index-link {
+  display: block; /* Ensures it behaves like a container */
+  text-decoration: none; /* Removes unwanted underlining */
+  color: inherit; /* Keeps text color natural */
+}
+
+.featured-index-link img {
+  width: 100%; /* Ensures the image takes its natural or full width */
+  max-width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Prevents inline spacing issues */
+}
+
+/* Media Query for Smaller Screens */
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .featured-index-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .featured-index-item {
+    width: 100%; /* Take full width */
+    max-width: 100%; /* Prevent shrinking */
+    flex: none; /* Remove Flexbox behavior */
+    height: auto; /* Allow height to adjust */
+    margin: 0; /* Reset margin */
+    border-radius: 10px !important;
+    overflow: hidden;
+  }
+
+  .featured-index-item:hover {
+    transform: none; /* Disable scaling for smaller screens */
+    width: 100%; /* Ensure it fits within the screen width */
+    max-width: 100vw; /* Prevent exceeding the viewport width */
+    height: auto; /* Dynamically adjust height */
+  }
+
+  .featured-index-container .featured-index-item:last-child {
+    width: 100%; /* Explicit width for consistency */
+    max-width: 100%;
+    flex: none; /* Ensure the last item behaves like the others */
+  }
+
+  .featured-index-title {
+    font-size: clamp(16px, 5vw, 22px); /* Dynamically adjust font size */
+    line-height: 1.4;
+  }
+
+  .featured-index-description {
+    font-size: clamp(14px, 4vw, 18px); /* Dynamic font sizing */
+    line-height: 1.5;
+  }
+}
+
+/* INDEX PAGE FEATURED POSTS-NEW END */
+
+/* FOLLOW  */
+
+.follow-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.social-link {
+  font-size: 25px; /* Adjust icon size */
+  color: darkolivegreen; /* Matching your theme */
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: darkred; /* Darker red on hover */
+}
+
+.social-icons .social-link i {
+  font-size: 50px; /* Adjust this value as needed for bigger icons */
+  transition: transform 0.3s ease; /* Smooth effect for hover */
+}
+
+.social-icons .social-link i:hover {
+  transform: scale(1.2); /* Grows slightly on hover */
+}
+
+.contact-container {
+  margin-top: 100px;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  height: 50vh;
+  width: 100%; /* Ensures it spans the full width */
+
+  margin-bottom: 100px;
+}
+
+.contact-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 30px;
+}
+/* FOLLOW END */
+
+/* CONTACT WHATSAPP */
+.social-icons-wa {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.social-link-wa {
+  font-size: 25px; /* Adjust icon size */
+  color: darkolivegreen; /* Matching your theme */
+  transition: color 0.3s ease;
+}
+
+.social-link-wa:hover {
+  color: darkred; /* Darker red on hover */
+}
+
+.social-icons-wa .social-link-wa i {
+  font-size: 100px; /* Adjust this value as needed for bigger icons */
+  transition: transform 0.3s ease; /* Smooth effect for hover */
+}
+
+.social-icons-wa .social-link-wa i:hover {
+  transform: scale(1.2); /* Grows slightly on hover */
+}
+
+.contact-container-wa {
+  margin-top: 90px;
+}
+
+.contact-text-wa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  height: 50vh;
+  width: 100%; /* Ensures it spans the full width */
+
+  margin-bottom: 100px;
+}
+
+.contact-icons-wa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+/* CONTACT WHATSAPP END */
+
+/* BLOG POST */
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Full-width blog title */
+.post-title-fullwidth {
+  font-size: 90px;
+  text-align: center;
+  margin-top: 150px;
+  color: #333;
+  width: 100%;
+  margin-bottom: 100px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Blog subtitle */
+.blog-subtitle {
+  margin-bottom: 50px;
+  font-size: 40px !important;
+  font-weight: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Content wrapper holds post + sidebar */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto; /* Centers it horizontally */
+}
+
+/* Blog post and sidebar */
+.blog-post,
+.sidebar {
+  max-width: 100%; /* Keeps everything within container */
+  padding-bottom: 100px;
+  min-width: 0; /* Allow flex items to shrink properly */
+}
+
+/* Blog post */
+.blog-post {
+  flex: 1 1 0;
+  min-width: 0; /* Critical: allows shrinking inside flex */
+  overflow-wrap: break-word; /* Allow breaking long words */
+  word-break: break-word;
+}
+
+.post-meta {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* Sidebar container */
+.sidebar {
+  flex: 0 0 280px; /* Fixed width */
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  align-self: flex-start;
+  background-color: rgba(199, 199, 199, 0.5);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-width: 0; /* Allow shrinking */
+}
+
+/* Widgets inside sidebar */
+.sidebar .widget {
+  margin-bottom: 30px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Headings inside sidebar widgets */
+.sidebar h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: black;
+  word-break: break-word;
+}
+
+/* Links in sidebar (categories, posts) */
+.sidebar a {
+  color: rgb(8, 8, 58);
+  text-decoration: none;
+  white-space: normal; /* Allow wrapping */
+  word-break: break-word;
+  display: inline-block; /* Helps wrapping */
+}
+
+/* Buttons inside category list */
+.sidebar .category-buttons a.btn {
+  word-break: break-word;
+  white-space: normal;
+  display: inline-block;
+  margin: 0.25rem 0.25rem 0.25rem 0; /* maintain spacing */
+}
+
+/* Sidebar newest posts list */
+.sidebar .newest-posts ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar .newest-posts li {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.sidebar .newest-posts a {
+  display: block;
+  max-width: 100%;
+  white-space: normal; /* Allows wrapping */
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Search box input */
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+/* Tags */
+.tags .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags .tag-list span {
+  background-color: darkolivegreen;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.category-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-category {
+  font-weight: bold;
+  color: darkred;
+}
+
+/* Blog post content headings */
+.post-content h2 {
+  font-size: 35px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.post-content h3 {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 25px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.post-content h4 {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.post-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Separator */
+.separator {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 50px 0;
+}
+
+/* Post quote */
+.post-quote {
+  font-style: italic;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #444;
+  border-left: 4px solid #ccc;
+  padding-left: 1em;
+  margin: 1.5em 0;
+}
+
+/* Post image */
+.post-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 400px; /* Fixed height if needed */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Container holding image */
+.post-image-container {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Image inside container */
+.inpost-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+  .post-title-fullwidth {
+    font-size: 60px;
+    margin-top: 100px;
+    margin-bottom: 70px;
+  }
+
+  .blog-subtitle {
+    font-size: 30px !important;
+  }
+
+  .social-share {
+    gap: 15px;
+    margin: 30px 0;
+  }
+
+  .social-share a i {
+    font-size: 2em;
+  }
+
+  .social-share-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-title-fullwidth {
+    font-size: 40px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  .blog-subtitle {
+    font-size: 24px !important;
+  }
+
+  .social-share {
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .social-share a i {
+    font-size: 1.5em;
+  }
+
+  .social-share-title {
+    font-size: 20px;
+  }
+}
+
+/* Social share icons */
+
+.social-share {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 70px 0;
+}
+
+.social-share a {
+  color: darkgoldenrod;
+}
+
+.social-share a:hover {
+  color: darkred;
+  animation: vibrate 0.3s linear;
+}
+
+.social-share-pages {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.social-share-pages a {
+  color: darkgoldenrod;
+}
+
+.social-share-pages a:hover {
+  color: darkred;
+  animation: vibrate 0.3s linear;
+}
+
+.social-share-title {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-share-divider {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-2px);
+  }
+  20% {
+    transform: translateX(2px);
+  }
+  30% {
+    transform: translateX(-2px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  60% {
+    transform: translateX(2px);
+  }
+  70% {
+    transform: translateX(-2px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  90% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* PAGES */
+/* Main container */
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Full-width title */
+.title-fullwidth {
+  font-size: 72px;
+  text-align: center;
+  color: #333;
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.pages-subtitle {
+  margin-bottom: 0px;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* Content wrapper holds post + sidebar */
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* BLOG END */
+
+/* PAGES */
+/* Main container */
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Full-width title */
+.title-fullwidth {
+  font-size: 72px;
+  text-align: center;
+  color: #333;
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.pages-subtitle {
+  margin-bottom: 0px;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* Content wrapper holds post + sidebar */
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* SERVICES CONTAINER SECTION */
+.services-container {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  gap: 20px; /* Gap between items */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+  padding: 0 50px; /* Padding for container */
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+/* Services meta (services name and post count) */
+.services-meta {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between; /* Space between the category name and post count */
+  align-items: center;
+  width: 100%;
+  margin-top: 10px; /* Optional: Space above meta */
+}
+
+.services-meta span {
+  flex: 1; /* Allow both spans to take up available space */
+}
+
+/* Optional: Adjust last item's flex if it's still behaving strangely */
+.services-container .services-item:last-child {
+  flex: 1 1 calc(33.333% - 20px); /* Keep the same size as others */
+  max-width: calc(33.333% - 20px);
+}
+
+/* Services Item */
+.services-item {
+  position: relative; /* Establish positioning context for children */
+  flex: 1 1 calc(33.333% - 20px); /* Grid layout for 3 items per row */
+  max-width: calc(33.333% - 20px); /* Limit max width */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Prevent content spill */
+  margin-bottom: 20px; /* Space between items */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out; /* Smooth transitions */
+  z-index: 1; /* Default stacking order */
+}
+
+/* Enlarged Hover Effect */
+.services-item:hover {
+  transform: scale(1.8); /* Increases the size by 1.5x */
+  z-index: 100; /* Brings it above other elements */
+}
+
+/* Services Image */
+.services-item img {
+  width: 100%; /* Full width of container */
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure photo covers container */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Hover effect on services image */
+.services-item:hover img {
+  transform: scale(1.1); /* Zoom in slightly */
+  border-radius: 15px;
+}
+
+/* Services Content (Title and Description) */
+.services-content {
+  position: absolute;
+  top: 0; /* Covers entire container */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Stack title and description vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center-align text */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in layout */
+}
+
+/* Default State: Title */
+.services-title {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  color: black; /* White text for readability */
+  font-size: 26px; /* Title font size */
+  font-weight: bold;
+  padding: 10px 15px; /* Space around title */
+  border-radius: 5px; /* Rounded corners for title */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
+}
+
+/* Hover Effect */
+.services-item:hover .services-title {
+  display: none; /* Hide title on hover */
+}
+
+/* Default State: Description Hidden */
+.services-description {
+  display: none; /* Hidden by default */
+  color: black; /* White text */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent black background */
+  padding: 15px 20px; /* Space around description */
+  font-size: 16px; /* Font size for description */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
+}
+
+/* Hover State: Description Appears */
+.services-item:hover .services-description {
+  opacity: 1; /* Fully display the description */
+  pointer-events: auto; /* Enable interaction with description */
+  display: block; /* Show description on hover */
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    max-width: 100%;
+  }
+
+  .services-item {
+    width: 90%;
+    max-width: 400px;
+    flex: none;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .services-item h2,
+  .services-item p {
+    max-width: 90%; /* Prevent text from overflowing */
+    text-align: center; /* Ensure proper alignment */
+  }
+
+  .services-item:hover {
+    transform: none; /* Disable scaling for smaller screens */
+    width: 100%; /* Ensure it fits within the screen width */
+    max-width: 100vw; /* Prevent exceeding the viewport width */
+    height: auto; /* Dynamically adjust height */
+  }
+
+  .services-container .services-item:last-child {
+    width: 100%; /* Explicit width for consistency */
+    max-width: 100%;
+    flex: none; /* Ensure the last item behaves like the others */
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .services-container {
+    align-items: center;
+    padding: 0 15px;
+    max-width: 100%;
+  }
+
+  .services-item {
+    width: 60%;
+    max-width: 400px;
+    flex: none;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .services-item h2,
+  .services-item p {
+    max-width: 90%; /* Prevent text from overflowing */
+    text-align: center; /* Ensure proper alignment */
+  }
+
+  .services-item:hover {
+    transform: none;
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+  }
+
+  .services-container .services-item:last-child {
+    width: 60%;
+    max-width: 60%;
+    flex: none;
+  }
+}
+
+/* END OF SERVICES CONTAINER SECTION */
+
+/* PAGES END */
+
+/* CATEGORIES */
+/* HERO SECTION */
+.hero-category-tech {
+  background-image: url(/assets/images/code-dark.webp);
+}
+.hero-category-wordcraft {
+  background-image: url(/assets/images/typewriter-flower.webp);
+}
+.hero-category-travels {
+  background-image: url(/assets/images/passport-hat.webp);
+}
+.hero-category-digital {
+  background-image: url(/assets/images/digital-marketing.webp);
+}
+.hero-category-mindset {
+  background-image: url(/assets/images/woman-looking-on-her-smartphone-and-laughing.webp);
+}
+.hero-category-stories {
+  background-image: url(/assets/images/books-tea.webp);
+}
+
+.hero-category-tech,
+.hero-category-wordcraft,
+.hero-category-travels,
+.hero-category-digital,
+.hero-category-mindset,
+.hero-category-stories {
+  margin-top: 0;
+  padding-top: 80px;
+  height: 110vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1; /* Make sure it's below header */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+.hero-category-tech::before,
+.hero-category-wordcraft::before,
+.hero-category-travels::before,
+.hero-category-digital::before,
+.hero-category-mindset::before,
+.hero-category-stories::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.search-bar {
+  display: flex;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: darkred;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 1px 30px 30px 1px;
+}
+
+.search-bar button:hover {
+  background-color: darkgoldenrod;
+}
+
+/* Hero Content (text in the center of hero) */
+
+.hero-category-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000; /* Black text */
+  text-align: center;
+  z-index: 3; /* Ensures content is above the overlay */
+  line-height: 1.5; /* Reduce line spacing */
+  max-width: 90%; /* Ensures content doesn't stretch too wide */
+  width: 70%; /* Make sure it takes up full width up to the max-width */
+  padding-top: 50px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-bottom: 80px;
+}
+
+/* Remove default margins of h1 and p */
+.hero-category-content h1,
+.hero-category-content p {
+  margin: 0;
+}
+
+/* Add small margin between h1 and p */
+.hero-category-content h1 {
+  margin-bottom: 5px;
+}
+
+.hero-category-content p {
+  margin-top: 5px;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .hero-category-content {
+    position: relative; /* Change to relative positioning on smaller screens */
+    top: 0; /* Reset vertical positioning */
+    left: 50%; /* Keep horizontal centering */
+    transform: translateX(
+      -50%
+    ); /* Ensure content stays centered horizontally */
+    max-width: 100%; /* Allow the content to take up more width on smaller screens */
+    padding: 20px; /* Add some padding to prevent content from touching edges */
+  }
+
+  .hero-category-content h1 {
+    font-size: 2em; /* Adjust font size for smaller screens */
+  }
+
+  .hero-category-content p {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
+
+  .hero-category-content .search-bar {
+    width: 100%; /* Make search bar full-width */
+    margin-top: 15px; /* Add some space between the text and search bar */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-category-content h1 {
+    font-size: 1.5em; /* Even smaller font for very small screens */
+  }
+
+  .hero-category-content p {
+    font-size: 1em; /* Adjust the font size further */
+  }
+
+  .hero-category-content .search-bar {
+    width: 100%; /* Make sure the search bar takes full width */
+    margin-top: 10px;
+  }
+}
+/* HERO END  */
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  z-index: -1;
+}
+
+/* CATEGORY-TEMPLATE*/
+
+.front-sections-headings {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* POST-CARD CONTAINER */
+.post-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Posts aligned left */
+  gap: 20px;
+  padding: 0 50px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+/* Each post-card item */
+.post-card-item {
+  flex: 1 1 calc(20% - 20px); /* 5 items per row, subtracting gap */
+  max-width: calc(20% - 20px); /* Ensure no items stretch past this */
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(199, 199, 199, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); /* Added shadow */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.post-card-item:hover {
+  transform: translateY(-20px); /* Subtle lift on hover */
+}
+
+/* Image styling */
+.post-card-item img {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Content wrapper */
+.post-card-info {
+  padding: 5px;
+}
+
+/* Title */
+.post-card-heading {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: rgb(0, 0, 32);
+  margin: 0;
+}
+
+.post-card-heading a {
+  color: darkblue; /* or use #8B0000 for a richer dark red */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  font-weight: normal;
+}
+
+.post-card-heading a:hover {
+  color: darkred; /* or use #555 for a consistent dark gray */
+}
+
+/* Excerpt */
+.post-card-excerpt {
+  font-size: 0.95rem;
+  color: #444444;
+  margin-top: 8px;
+}
+
+/* Meta */
+.post-card-meta {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: #444444;
+}
+
+/* Responsive: Medium Screens (Tablets and below) */
+@media screen and (max-width: 768px) {
+  .post-card-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 30px; /* Space between items */
+    padding: 0 20px; /* Adjust padding for better spacing */
+    width: 100%; /* Ensure the container takes up the full width */
+  }
+
+  .post-card-item {
+    width: 70%; /* Set each item to take 70% of the container's width */
+    max-width: 70%; /* Limit the item width to 70% */
+    flex-grow: 0; /* Disable flex-grow for column layout */
+    margin: 0 auto; /* Center the items horizontally */
+  }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+  .post-card-item {
+    width: 100%; /* 1 item per row */
+    max-width: 100%; /* Ensure no max-width constraint */
+  }
+}
+
+/* POST-CARD CONTAINER END */
+
+/* GRID CONTAINER (FEATURED POSTS) */
+.featured-posts {
+  padding-top: 30px;
+  padding-bottom: 90px;
+}
+.fe-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 50px 5vw; /* Use relative units for better responsiveness */
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.fe-grid-item {
+  overflow: hidden;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+  background-color: white;
+}
+
+.fe-grid-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+.fe-grid-item:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fe-grid-info {
+  margin-top: 15px;
+}
+
+.fe-grid-heading {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  color: #333;
+  padding: 0px 20px 20px 20px;
+}
+
+.fe-grid-excerpt {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+  padding: 0px 20px 20px 20px;
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+  .fe-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px 5vw;
+  }
+
+  .fe-grid-item img {
+    height: 170px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .fe-grid-container {
+    grid-template-columns: 1fr;
+    padding: 40px 5vw;
+  }
+
+  .fe-grid-item img {
+    height: 150px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .fe-grid-container {
+    padding: 20px 4vw;
+  }
+
+  .fe-grid-item img {
+    height: 120px;
+  }
+
+  .fe-grid-heading {
+    font-size: 1.1rem;
+  }
+
+  .fe-grid-excerpt {
+    font-size: 0.95rem;
+  }
+}
+
+/* TAG CLOUD */
+
+/* Make the wrapper full width and center the tag cloud */
+.tag-cloud-wrapper {
+  width: 100%;
+  padding: 20px 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tag cloud grid */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 700px;
+  background-color: transparent; /* optional */
+  z-index: 1;
+}
+
+/* Individual Tag Styles */
+.tag {
+  text-decoration: none;
+  color: darkblue;
+  padding: 8px 12px;
+  background-color: darkgoldenrod;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.tag:hover {
+  color: darkgoldenrod;
+  background-color: darkblue;
+  transform: scale(1.1);
+}
+
+/* Responsive: Smaller font and tighter spacing on small screens */
+@media (max-width: 768px) {
+  .tag-cloud {
+    gap: 10px;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+}
+
+/* TAG CLOUD END */
+
+/* SUBSCRIBE */
+/* Subscription Widget Styles */
+.subscription-widget {
+  text-align: center; /* Align the content of the widget to the left */
+  margin: 100px 0;
+}
+
+#subscription-message {
+  opacity: 1;
+  transition: opacity 1s ease;
+  display: block; /* Ensure it's block by default */
+}
+
+#subscription-message.hide {
+  opacity: 0;
+}
+
+.subscription-divider {
+  background-color: rgba(225, 225, 225, 0.4);
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  overflow: hidden; /* This stops margin collapse */
+  margin: 100px 0;
+}
+
+.subscription-widget h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px; /* Add some space below the heading */
+}
+
+.subscription-widget form {
+  display: flex;
+  justify-content: center; /* Align the form elements to the left */
+  align-items: center;
+}
+
+.subscription-widget input[type="email"] {
+  padding: 10px;
+  font-size: 1rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #ccc;
+  width: 310px; /* You can adjust the width as per your preference */
+}
+
+.subscription-widget button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: darkred;
+  color: white;
+  border: 1px solid #ccc;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.subscription-widget button:hover {
+  background-color: darkgoldenrod;
+}
+
+.subscribe-widget-logo {
+  width: 20px;
+  margin-right: 0;
+}
+
+/* CONTAINER FOR SUBSCRIPTION LOGO AND NAME */
+.logo-name {
+  padding-top: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1px; /* Add small controlled spacing between children */
+}
+/* TITLE STYLES */
+.subs-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.subs-name {
+  font-size: 15px;
+  font-weight: bold; /* Changed from bold */
+  color: #000000;
+
+  text-transform: lowercase;
+}
+
+.subs-brand-name {
+  font-family: "Rock Salt", cursive !important; /* Explicitly set Rock Salt */
+}
+
+/* LOGO STYLES */
+.subs-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Remove any default margins */
+}
+
+.subs-img {
+  width: 20px;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .subscription-widget {
+    width: 90%; /* Prevents full-width stretching */
+    max-width: 400px; /* Limits excessive width */
+    margin: 0 auto; /* Centers the widget */
+    padding: 15px; /* Adds inner spacing */
+  }
+
+  .subscription-widget input[type="email"] {
+    width: 80%; /* Reduces input field width */
+    max-width: 300px;
+  }
+
+  .subscription-widget button {
+    width: auto; /* Prevents it from stretching too wide */
+    padding: 10px 15px;
+  }
+
+  @media screen and (max-width: 480px) {
+    .subscription-widget {
+      width: 95%;
+      padding: 10px;
+    }
+
+    .subscription-widget input[type="email"] {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 10px;
+    }
+
+    .subscription-widget button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+    }
+
+    .subscription-widget h3 {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+  }
+}
+
+/* SUBSCRIBE END */
+
+/* CONTACT PAGE */
+.main-container-contact {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+/* CONTACT PAGE END */
+
+/* CONTACT FORM */
+/* Contact Form Section */
+.contact-form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  width: 100%; /* Ensures it spans the full width */
+}
+
+/* Form Container */
+.contact-form-container {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%;
+  max-width: 600px; /* Max width for the form */
+  box-sizing: border-box;
+}
+
+/* Heading Style */
+.contact-form-container h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between inputs */
+}
+
+.contact-form label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  width: 100%; /* Ensures input elements take full width of container */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2e2e2e; /* Dark border on focus */
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: darkred;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make the button full width to match inputs */
+}
+
+.contact-form button:hover {
+  background-color: darkgoldenrod;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form-container {
+    padding: 30px;
+  }
+
+  .contact-form-container h3 {
+    font-size: 1.4rem;
+  }
+
+  .contact-form label {
+    font-size: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .contact-form button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-form-container {
+    padding: 20px;
+  }
+
+  .contact-form-container h3 {
+    font-size: 1.25rem;
+  }
+
+  .contact-form label {
+    font-size: 0.95rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .contact-form button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* SPACER */
+
+.spacer {
+  height: 100px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.divider span {
+  padding: 0 10px; /* Adjust spacing around dots */
+  font-size: 24px; /* Adjust size */
+  color: #555; /* Change color */
+}
+/* DONATE */
+
+.donate-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: darkred;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.donate-button:hover {
+  background-color: darkgoldenrod;
+  color: white;
+}
+.donate-link {
+  margin-top: 50px;
+}
+
+/* PAYPAL IN CATEGORIES */
+.paypal-categories {
+  position: relative;
+  display: block;
+  margin: 0 auto; /* Centers horizontally */
+  text-align: center;
+  margin-bottom: 100px;
+}
+/* PAYPAL IN CATEGORIES */
+
+/* CATEGORY STORIES */
+.hero-category-stories {
+  margin-top: 0;
+  padding-top: 80px;
+  height: 100vh;
+  background-image: url(/assets/images/book-rose.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1; /* Make sure it's below header */
+}
+
+/* CATEGORY STORIES END */
+
+/* RIGHT ALIGNED TEXT */
+.right-aligned {
+  display: block;
+  text-align: right !important;
+}
+
+/* RIGHT ALIGNED TEXT END */
+
+/* POSTS IN INDIVIDUAL CATEGORIES */
+.category-post-content {
+  margin-top: 0;
+}
+/* POSTS IN INDIVIDUAL CATEGORIES END */
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}
+/* HIDDEN END */
+
+/* NO POSTS IN CATEGORIES */
+.no-posts {
+  text-align: center;
+  color: darkgreen;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+/* NO POSTS IN CATEGORIES END */
+
+/* STYLED FIRST LETTER */
+.styled-text::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+/* STYLED FIRST LETTER END */

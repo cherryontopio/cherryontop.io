@@ -1,0 +1,1 @@
+<h3 class="no-posts">Oops! <br><br> Looks like there are no posts in this category yet.<br> Check back later, and in the meantime, enjoy our Featured Posts!</h2>
