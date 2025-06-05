@@ -1,24 +1,24 @@
 <?php
 // Define the featured posts array with a date field
 $featured_posts = [
-     [
+    [
         'image' => '/assets/images/website-management.webp',
         'alt' => 'cherryontop.io homepage',
-        'title' => 'Why You Should Hire a Human to Manage Your Website',
+        'title' => 'Hire a Human Web Admin',
         'link' => '/blog/2025/May/why-use-human-web-admin.php',
         'date' => '2025-05-20',
         'description' => '',
-        'post_count' => '',        
+        'post_count' => '',
     ],
-     [
+    [
         'image' => '/assets/images/Google-Analytics.webp',
         'alt' => 'Google Analytics graphs',
-        'title' => 'How to Set Up Google Analytics on Your Webpage',
+        'title' => 'Set Up Google Analytics',
         'description' => '',
         'date' => '2025-05-14',
         'post_count' => '',
         'link' => '/blog/2025/May/how-to-setup-google-analytics-website.php',
-    
+
     ],
     [
         'image' => '/assets/images/person-on-beach-reading-book.webp',
@@ -32,7 +32,7 @@ $featured_posts = [
     [
         'image' => '/assets/images/we-can.webp',
         'alt' => 'sign We Can',
-        'title' => 'The Importance of Positive Thinking',
+        'title' => 'Positive Thinking',
         'link' => '/blog/2025/May/role-of-positive-thinking-in-success.php',
         'description' => 'The role of positive thinking in achieving success',
         'date' => '2025-05-14'
@@ -40,18 +40,18 @@ $featured_posts = [
     [
         'image' => '/assets/images/fleas-in-a-jar.webp',
         'alt' => 'fleas in a jar for experiment',
-        'title' => 'The Flea in a Jar Experiment',
+        'title' => 'The Flea in a Jar',
         'link' => '/blog/2025/May/flea-in-jar.php',
         'description' => 'Is the famous Fleas in a Jar Experiment true?',
-        'date' => '2025-05-14'         
+        'date' => '2025-05-14'
     ],
     [
         'image' => '/assets/images/Boothe-as-Marlowe.webp',
         'alt' => 'Powers Boothe as Philip Marlowe, PI',
-        'title' => 'The Sharp Wit of Raymond Chandler',
+        'title' => 'The Wit of R. Chandler',
         'link' => '/blog/2025/May/raymond-chandler-quotes.php',
         "description" => "From The Man Who Defined a Genre",
-        'date' => '2025-05-13' 
+        'date' => '2025-05-13'
     ],
     [
         'image' => '/assets/images/writers-toolbox.webp',
@@ -77,9 +77,9 @@ $featured_posts = [
         'title' => 'The Skills No Developer Can Do Without',
         'link' => '/blog/2025/May/skills-no-developer-can-do-without.php',
         "description" => "Being a web developer isn’t just about smashing code until the browser behaves.",
-        'date' => '2025-05-13' 
+        'date' => '2025-05-13'
     ],
-    [       
+    [
         "image" => "/assets/images/coding-mobile-app.webp",
         "alt" => "Laptop with code and mobile app",
         "title" => "Web Design vs Web Development",
@@ -94,7 +94,7 @@ $featured_posts = [
         "link" => "/blog/2025/May/ai-humor-sarcastic.php",
         "description" => "Pondering about the future: Will AI ever be like a good-humoured grandpa to us?",
         "date" => "2025-05-01"
-    ],  
+    ],
     [
         "image" => "/assets/images/coffee-art.webp",
         "alt" => "coffee being poured into a cup with coffee art",
@@ -117,7 +117,7 @@ $featured_posts = [
         "title" => "Bristol Stole My Heart",
         "link" => "/blog/2025/May/bristol-creativity-cider-views.php",
         "description" => "Bristol is a vibrant town sitting in the southwest of England,...",
-        "date" => "2025-05-01"  
+        "date" => "2025-05-01"
     ]
 ];
 
@@ -128,7 +128,7 @@ usort($featured_posts, function ($a, $b) {
 
 ?>
 <div class="featured-index-container">
-    <?php 
+    <?php
     $count = 0; // Initialize counter
     foreach ($featured_posts as $post):
         if (isset($post['hidden']) && $post['hidden']) {
@@ -140,13 +140,13 @@ usort($featured_posts, function ($a, $b) {
         $count++; // Increment counter
     ?>
         <div class="featured-index-item">
-        <a href="<?= $post["link"] ?>" class="featured-index-link">
-        <img src="<?= htmlspecialchars($post["image"]) ?>" alt="<?= htmlspecialchars($post["alt"]) ?>">
-    <div class="featured-index-content">
-        <h3 class="featured-index-title"><?= $post["title"] ?></h3>
-        <p class="featured-index-description"><?= $post["description"] ?></p>
-    </div>
-</a>
+            <a href="<?= $post["link"] ?>" class="featured-index-link">
+                <img src="<?= htmlspecialchars($post["image"]) ?>" alt="<?= htmlspecialchars($post["alt"]) ?>">
+                <div class="featured-index-content">
+                    <h3 class="featured-index-title"><?= $post["title"] ?></h3>
+                    <p class="featured-index-description"><?= $post["description"] ?></p>
+                </div>
+            </a>
 
         </div>
     <?php endforeach; ?>
