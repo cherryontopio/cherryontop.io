@@ -1,14 +1,8 @@
 <?php
-$publishDate = '2025-05-29';  // <-- Actual post publish date here
+$pageTitle = "The Flea in a Jar";
+$publishDate = '2025-05-04';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
-?>
-
-<?php
-$pageTitle = "Blog Post";
-
-
-// Get the current date
-$publishDate = date('Y-m-d');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +18,7 @@ $publishDate = date('Y-m-d');
     <!-- Blog Main Content -->
     <main class="blog-main container">
       <!-- Full-Width Title -->
-      <h2 class="post-title-fullwidth">The Flea in a Jar:</h2>
+      <h2 class="post-title-fullwidth">The Flea in a Jar</h2>
 
       <!-- Blog and Sidebar Wrapper -->
       <div class="content-wrapper">
