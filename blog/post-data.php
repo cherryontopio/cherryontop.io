@@ -40,7 +40,13 @@ function getAllPosts()
                 $alt = 'Post image';
             }
 
-            $date = date('Y-m-d', $fileInfo->getMTime());
+            // *** NEW: Extract publishDate variable from PHP code in the post ***
+            if (preg_match('/\$publishDate\s*=\s*[\'"]([^\'"]+)[\'"]\s*;/', $content, $dateMatch)) {
+                $date = $dateMatch[1];  // Use the manually set publishDate
+            } else {
+                // fallback to file modified date if publishDate not found
+                $date = date('Y-m-d', $fileInfo->getMTime());
+            }
 
             // Extract category from visible <a> inside <span class="post-categories">
             $category = null;
@@ -63,7 +69,7 @@ function getAllPosts()
         }
     }
 
-    // Sort by newest first
+    // Sort by newest first using the actual publishDate
     usort($posts, function ($a, $b) {
         return strtotime($b['date']) - strtotime($a['date']);
     });
