@@ -1,4 +1,5 @@
 <?php
+$publishDate = '2025-06-04';  // <-- Actual post publish date here
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
 

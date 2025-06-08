@@ -1,4 +1,6 @@
 <?php
+$publishDate = 'YYYY-MM-DD';  // <-- Actual post publish date here
+
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
 
@@ -7,7 +9,8 @@ $pageTitle = "Blog Post";
 
 
 // Get the current date
-$postPublishDate = date('F j, Y');  // This will give you the current date, formatted as 'Month Day, Year'
+$postPublishDate = isset($publishDate) ? date('F j, Y', strtotime($publishDate)) : date('F j, Y');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
