@@ -1,33 +1,27 @@
 <?php
-$publishDate = '2025-05-02';  // <-- Actual post publish date here
-// Set the page title
-$pageTitle = "Bristol Stole My Heart";
-
-// Define the header file path dynamically
-$headerPath = dirname(__DIR__, 3) . '/includes/header.php';
-
-// Check if the header file exists before including it
-if (file_exists($headerPath)) {
-  include $headerPath;
-} else {
-  echo "<p style='color: red;'>Error: Header file not found!</p>";
-}
-
-// Remove this line to keep your original publish date:
-// $publishDate = date('Y-m-d');
+$pageTitle = "Bristol";
+$publishDate = '2025-05-15';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
+include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
+  <meta charset="UTF-8">
+  <title><?php echo htmlspecialchars($pageTitle); ?></title>
+  <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
 <body>
 
   <section class="blog-section">
     <main class="blog-main container">
-      <h2 class="post-title-fullwidth">Bristol Stole My Heart</h2>
+
+      <!-- Full-Width Title -->
+      <h2 class="post-title-fullwidth"><?php echo htmlspecialchars($pageTitle); ?></h2>
+
 
       <div class="content-wrapper">
         <article class="blog-post">

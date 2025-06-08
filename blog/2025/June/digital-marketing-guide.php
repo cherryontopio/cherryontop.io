@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Digital Marketing Guide";
-$publishDate = '2025-06-04';
+$pageTitle = "How to: Digital Marketing";
+$publishDate = '2025-06-07';
 $postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
@@ -8,17 +8,19 @@ include dirname(__DIR__, 3) . '/includes/header.php';
 <html lang="en">
 
 <head>
-
+  <meta charset="UTF-8">
+  <title><?php echo htmlspecialchars($pageTitle); ?></title>
+  <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
 <body>
 
-
   <section class="blog-section">
-    <!-- Blog Main Content -->
     <main class="blog-main container">
+
       <!-- Full-Width Title -->
-      <h2 class="post-title-fullwidth">Digital Marketing Guide</h2>
+      <h2 class="post-title-fullwidth"><?php echo htmlspecialchars($pageTitle); ?></h2>
+
 
       <!-- Blog and Sidebar Wrapper -->
       <div class="content-wrapper">

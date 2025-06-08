@@ -1,25 +1,26 @@
 <?php
-$pageTitle = "Web Development Guide";
-$publishDate = '2025-06-08';
+$pageTitle = "How to: Web Development";
+$publishDate = '2025-06-06';
 $postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
+  <meta charset="UTF-8">
+  <title><?php echo htmlspecialchars($pageTitle); ?></title>
+  <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
 <body>
 
-
   <section class="blog-section">
-    <!-- Blog Main Content -->
     <main class="blog-main container">
+
       <!-- Full-Width Title -->
-      <h2 class="post-title-fullwidth">Web Development Guide</h2>
+      <h2 class="post-title-fullwidth"><?php echo htmlspecialchars($pageTitle); ?></h2>
+
 
       <!-- Blog and Sidebar Wrapper -->
       <div class="content-wrapper">

@@ -1,30 +1,27 @@
 <?php
-$publishDate = '2025-05-08';  // <-- Actual post publish date here
+$pageTitle = "The Man Who Defined a Genre";
+$publishDate = '2025-05-09';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
 
-<?php
-$pageTitle = "Blog Post";
-
-
-// Get the current date
-$publishDate = date('Y-m-d');
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
+  <meta charset="UTF-8">
+  <title><?php echo htmlspecialchars($pageTitle); ?></title>
+  <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
 <body>
 
-
   <section class="blog-section">
-    <!-- Blog Main Content -->
     <main class="blog-main container">
+
       <!-- Full-Width Title -->
-      <h2 class="post-title-fullwidth">The Sharp Wit and Hard Truths of Raymond Chandler</h2>
+      <h2 class="post-title-fullwidth"><?php echo htmlspecialchars($pageTitle); ?></h2>
+
 
       <!-- Blog and Sidebar Wrapper -->
       <div class="content-wrapper">
@@ -32,7 +29,7 @@ $publishDate = date('Y-m-d');
         <article class="blog-post">
 
           <img src="/assets/images/Boothe-as-Marlowe.webp" alt="Powers Boothe as Philip Marlowe, PI" class="post-image" />
-          <h3 class="blog-subtitle">The Man Who Defined a Genre</h3>
+          <h3 class="blog-subtitle">The Sharp Wit and Hard Truths of Raymond Chandler</h3>
           <!-- Insert the dynamic publish date here -->
           <p class="post-meta">Published on <?php echo date('F j, Y', strtotime($publishDate)); ?> • by <img class="cherry-icon" src="/assets/images/favicon.webp" style="height: 20px; vertical-align: middle;" alt="icon" alt="a cherry"></p>
           <p class="post-meta">

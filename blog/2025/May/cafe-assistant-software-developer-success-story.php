@@ -1,33 +1,27 @@
 <?php
-$publishDate = '2025-05-01';  // <-- Actual post publish date here
-// Set the page title
-$pageTitle = "From Café Assistant to Software Developer";
-
-// Define the header file path dynamically
-$headerPath = dirname(__DIR__, 3) . '/includes/header.php';
-
-// Check if the header file exists before including it
-if (file_exists($headerPath)) {
-  include $headerPath;
-} else {
-  echo "<p style='color: red;'>Error: Header file not found!</p>";
-}
-
-// Get the current date in "Month Day, Year" format
-$publishDate = date('Y-m-d');
+$pageTitle = "Reinventing My Career";
+$publishDate = '2025-05-01';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
+include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
-<!DOCTYPE html>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title><?php echo htmlspecialchars($pageTitle); ?></title>
+  <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
 <body>
 
-
   <section class="blog-section">
-    <!-- Blog Main Content -->
     <main class="blog-main container">
+
       <!-- Full-Width Title -->
-      <h2 class="post-title-fullwidth">From Café Assistant to Software Developer</h2>
+      <h2 class="post-title-fullwidth"><?php echo htmlspecialchars($pageTitle); ?></h2>
+
 
       <!-- Blog and Sidebar Wrapper -->
       <div class="content-wrapper">

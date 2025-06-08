@@ -1,30 +1,27 @@
 <?php
-$publishDate = '2025-05-19';  // <-- Actual post publish date here 
+$pageTitle = "Crack the Code of PPC";
+$publishDate = '2025-05-24';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
 
-<?php
-$pageTitle = "Blog Post";
-
-
-// Get the current date
-$publishDate = date('Y-m-d');
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
+  <meta charset="UTF-8">
+  <title><?php echo htmlspecialchars($pageTitle); ?></title>
+  <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
 <body>
 
-
   <section class="blog-section">
-    <!-- Blog Main Content -->
     <main class="blog-main container">
+
       <!-- Full-Width Title -->
-      <h2 class="post-title-fullwidth">Crack the Code of PPC</h2>
+      <h2 class="post-title-fullwidth"><?php echo htmlspecialchars($pageTitle); ?></h2>
+
 
       <!-- Blog and Sidebar Wrapper -->
       <div class="content-wrapper">

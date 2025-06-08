@@ -1,36 +1,27 @@
 <?php
-$publishDate = '2025-05-28';  // <-- Actual post publish date here
-// Set the page title
 $pageTitle = "From Languages to Code";
-
-// Define the header file path dynamically
-$headerPath = dirname(__DIR__, 3) . '/includes/header.php';
-
-// Check if the header file exists before including it
-if (file_exists($headerPath)) {
-  include $headerPath;
-} else {
-  echo "<p style='color: red;'>Error: Header file not found!</p>";
-}
-
-// Get the current date in "Month Day, Year" format
-$publishDate = date('Y-m-d');
+$publishDate = '2025-05-24';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
+include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
+  <meta charset="UTF-8">
+  <title><?php echo htmlspecialchars($pageTitle); ?></title>
+  <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
 <body>
 
-
   <section class="blog-section">
-    <!-- Blog Main Content -->
     <main class="blog-main container">
+
       <!-- Full-Width Title -->
-      <h2 class="post-title-fullwidth">From Languages to Code </h2>
+      <h2 class="post-title-fullwidth"><?php echo htmlspecialchars($pageTitle); ?></h2>
+
 
       <!-- Blog and Sidebar Wrapper -->
       <div class="content-wrapper">

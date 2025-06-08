@@ -1,30 +1,27 @@
 <?php
-$publishDate = '2025-05-26';  // <-- Actual post publish date here
+$pageTitle = "8 Techniques to Achieve Your Goals";
+$publishDate = '2025-05-14';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
 
-<?php
-$pageTitle = "Blog Post";
-
-
-// Get the current date
-$publishDate = date('Y-m-d');
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
+  <meta charset="UTF-8">
+  <title><?php echo htmlspecialchars($pageTitle); ?></title>
+  <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
 <body>
 
-
   <section class="blog-section">
-    <!-- Blog Main Content -->
     <main class="blog-main container">
+
       <!-- Full-Width Title -->
-      <h2 class="post-title-fullwidth">8 Techniques to Achieve Your Goals</h2>
+      <h2 class="post-title-fullwidth"><?php echo htmlspecialchars($pageTitle); ?></h2>
+
 
       <!-- Blog and Sidebar Wrapper -->
       <div class="content-wrapper">

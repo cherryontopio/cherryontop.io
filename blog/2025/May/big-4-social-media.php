@@ -1,18 +1,27 @@
 <?php
-$publishDate = '2025-05-30';  // <-- Actual post publish date here
 $pageTitle = "The Big 4 of Social Media";
+$publishDate = '2025-05-23';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <title><?php echo htmlspecialchars($pageTitle); ?></title>
+  <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
 <body>
+
   <section class="blog-section">
     <main class="blog-main container">
-      <h2 class="post-title-fullwidth">The Big 4 of Social Media</h2>
+
+      <!-- Full-Width Title -->
+      <h2 class="post-title-fullwidth"><?php echo htmlspecialchars($pageTitle); ?></h2>
+
 
       <div class="content-wrapper">
         <article class="blog-post">

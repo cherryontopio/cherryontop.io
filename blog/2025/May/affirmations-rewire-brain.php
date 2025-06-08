@@ -1,9 +1,7 @@
 <?php
-// Set the page title and publish date manually
 $pageTitle = "The Science of Affirmations: Rewire Your Brain";
 $publishDate = '2025-05-21';
-
-// Include the site-wide header
+$postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
 
@@ -29,6 +27,7 @@ include dirname(__DIR__, 3) . '/includes/header.php';
 
           <img src="/assets/images/be-positive.webp" alt="an uplifting quote" class="post-image" />
           <h3 class="blog-subtitle">Positive Thinking Miniseries</h3>
+
 
           <!-- Meta Info -->
           <p class="post-meta">
