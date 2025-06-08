@@ -1,10 +1,9 @@
 <?php
-$pagetitle = "The Role of Your Environment in Shaping Mindset";
+$pageTitle = "How Your Environment Shapes Your Mindset";
 $publishDate = '2025-05-21';
 $postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
