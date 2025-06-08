@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Unverified on Linkedin";
+$pageTitle = "Unverified";
 $publishDate = '2025-05-29';
 $postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
