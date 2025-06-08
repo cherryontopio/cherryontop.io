@@ -1,14 +1,8 @@
 <?php
-$publishDate = '2025-06-04';  // <-- Actual post publish date here
+$pageTitle = "Digital Marketing Guide";
+$publishDate = '2025-06-04';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
-?>
-
-<?php
-$pageTitle = "Blog Post";
-
-
-// Get the current date
-$postPublishDate = date('F j, Y');  // This will give you the current date, formatted as 'Month Day, Year'
 ?>
 <!DOCTYPE html>
 <html lang="en">

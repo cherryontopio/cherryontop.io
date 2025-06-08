@@ -13,8 +13,8 @@ if (file_exists($headerPath)) {
   echo "<p style='color: red;'>Error: Header file not found!</p>";
 }
 
-// Get the current date in "Month Day, Year" format
-$publishDate = date('Y-m-d');
+// Remove this line to keep your original publish date:
+// $publishDate = date('Y-m-d');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,34 +25,32 @@ $publishDate = date('Y-m-d');
 
 <body>
 
-
   <section class="blog-section">
-    <!-- Blog Main Content -->
     <main class="blog-main container">
-      <!-- Full-Width Title -->
       <h2 class="post-title-fullwidth">Bristol Stole My Heart</h2>
 
-      <!-- Blog and Sidebar Wrapper -->
       <div class="content-wrapper">
-        <!-- Main Blog Post -->
         <article class="blog-post">
 
           <img src="/assets/images/bristol.webp" alt="Bristol" class="post-image" />
           <h3 class="blog-subtitle">A City of Creativity, Cider, and Stunning Views</h3>
-          <!-- Insert the dynamic publish date here -->
-          <p class="post-meta">Published on <?php echo date('F j, Y', strtotime($publishDate)); ?> • by <img class="cherry-icon" src="/assets/images/favicon.webp" style="height: 20px; vertical-align: middle;" alt="icon" alt="a cherry"></p>
+
+          <p class="post-meta">
+            Published on <?php echo date('F j, Y', strtotime($publishDate)); ?> • by
+            <img class="cherry-icon" src="/assets/images/favicon.webp" style="height: 20px; vertical-align: middle;" alt="a cherry">
+          </p>
+
           <p class="post-meta">
             in
             <span class="post-categories">
               <a hidden href="/category/tech.php" class="post-category">tech</a>
-              <a hidden href="/category/digital.php" class="post-category"> digital </a>
-              <a hidden href="/category/mindset.php" class="post-category"> mindset</a>
-              <a hidden href="/category/stories.php" class="post-category"> stories </a>
-              <a href="/category/travels.php" class="post-category"> travels</a>
-              <a hidden href="/category/wordcraft.php" class="post-category"> wordcraft </a>
+              <a hidden href="/category/digital.php" class="post-category">digital</a>
+              <a hidden href="/category/mindset.php" class="post-category">mindset</a>
+              <a hidden href="/category/stories.php" class="post-category">stories</a>
+              <a href="/category/travels.php" class="post-category">travels</a>
+              <a hidden href="/category/wordcraft.php" class="post-category">wordcraft</a>
             </span>
           </p>
-
 
           <div class="post-content">
             <?php include dirname(__DIR__, 3) . '/includes/social-share.php'; ?>
@@ -65,10 +63,8 @@ $publishDate = date('Y-m-d');
             <p>At its heart, Bristol is a city of makers and doers—artists, musicians, engineers, and entrepreneurs who shape its character. It’s where Banksy first picked up a spray can, where Brunel left his engineering legacy, and where independent businesses thrive. There’s a fierce local pride here, not just in its history but in its future. People cycle more, shop local, and push for greener initiatives. It’s a place where cider is a way of life, music spills out from hidden venues, and every corner seems to tell a story. It’s quirky, welcoming, and just the right amount of weird—exactly the kind of city that sticks with you.</p>
             <p>Saying goodbye is something I’ve never found too easy — especially when I’ve enjoyed my stay. This time, however, I’m leaving knowing that I’ll be coming back.</p>
 
-            <!-- Add more content here -->
           </div>
-          <div>
-          </div>
+
           <div class="donate-link">
             Do you want to support me on my journey? <a href="https://www.paypal.com/donate/?hosted_button_id=FPLATGZCMZ2US" target="_blank">
               <button class="donate-button">Buy me a coffee!</button>
@@ -77,22 +73,14 @@ $publishDate = date('Y-m-d');
 
         </article>
 
-
-        <!-- Sidebar Section -->
         <?php include $_SERVER['DOCUMENT_ROOT'] . "/blog/sidebar.php"; ?>
       </div>
 
-      <!-- FEATURED ITEMS SECTION -->
-
-
       <?php include dirname(__DIR__, 3) . '/includes/featured-index-items.php'; ?>
 
-      <!-- FEATURED ITEMS END -->
-
-
     </main>
-
   </section>
+
   <?php
   $footerPath = dirname(__DIR__, 3) . '/includes/footer.php';
   if (file_exists($footerPath)) {

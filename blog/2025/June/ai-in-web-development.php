@@ -1,14 +1,8 @@
 <?php
-$publishDate = '2025-06-08';  // <-- Actual post publish date here
+$pageTitle = "The Influence of AI in Web Development";
+$publishDate = '2025-06-08';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
-?>
-
-<?php
-$pageTitle = "Blog Post";
-
-
-// Get the current date
-$postPublishDate = date('F j, Y');  // This will give you the current date, formatted as 'Month Day, Year'
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +12,6 @@ $postPublishDate = date('F j, Y');  // This will give you the current date, form
 </head>
 
 <body>
-
 
   <section class="blog-section">
     <!-- Blog Main Content -->
@@ -34,7 +27,7 @@ $postPublishDate = date('F j, Y');  // This will give you the current date, form
           <img src="/assets/images/ai-icons.webp" alt="icons of various ai chats" class="post-image" />
           <h3 class="blog-subtitle">A New Era of Creativity and Precision</h3>
           <!-- Insert the dynamic publish date here -->
-          <p class="post-meta">Published on <?php echo $postPublishDate; ?> • by <img class="cherry-icon" src="/assets/images/favicon.webp" style="height: 20px; vertical-align: middle;" alt="icon" alt="a cherry"></p>
+          <p class="post-meta">Published on <?php echo $postPublishDate; ?> • by <img class="cherry-icon" src="/assets/images/favicon.webp" style="height: 20px; vertical-align: middle;" alt="a cherry"></p>
           <p class="post-meta">
             in
             <span class="post-categories">
@@ -46,7 +39,6 @@ $postPublishDate = date('F j, Y');  // This will give you the current date, form
               <a hidden href="/category/wordcraft.php" class="post-category"> wordcraft </a>
             </span>
           </p>
-
 
           <div class="post-content">
             <?php include dirname(__DIR__, 3) . '/includes/social-share.php'; ?>
@@ -68,8 +60,8 @@ $postPublishDate = date('F j, Y');  // This will give you the current date, form
             <p>Even though AI is making coding easier, technical knowledge is still important. Developers still need to understand how websites function, manage security, and ensure a great user experience. But the role is evolving—it's less about manual coding and more about structuring AI-generated components in a meaningful way.</p>
 
             <p>In the coming years, success in web development will depend on how well someone can harness AI tools, organize code efficiently, and create intuitive digital experiences. The future won’t belong to those who can write every line of code by hand, but to those who know how to make AI work for them.</p>
-            <img src="/assets/images/" alt="" class="inpost-image">
 
+            <!-- Removed the broken/empty image tag -->
 
             <!-- Add more content here -->
           </div>
@@ -83,7 +75,6 @@ $postPublishDate = date('F j, Y');  // This will give you the current date, form
 
         </article>
 
-
         <!-- Sidebar Section -->
         <?php include $_SERVER['DOCUMENT_ROOT'] . "/blog/sidebar.php"; ?>
       </div>
@@ -93,7 +84,6 @@ $postPublishDate = date('F j, Y');  // This will give you the current date, form
       <?php include dirname(__DIR__, 3) . '/includes/featured-index-items.php'; ?>
 
       <!-- FEATURED ITEMS END -->
-
 
     </main>
 
