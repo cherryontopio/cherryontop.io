@@ -9,6 +9,7 @@ function buildPostsArray()
 
     foreach (new DirectoryIterator($baseDir) as $monthDir) {
         if (!$monthDir->isDir() || $monthDir->isDot()) continue;
+        if (strtolower($monthDir->getFilename()) !== 'june') continue;
 
         $monthPath = $monthDir->getPathname();
 
