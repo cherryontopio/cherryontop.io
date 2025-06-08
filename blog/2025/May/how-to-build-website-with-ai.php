@@ -28,7 +28,7 @@ include dirname(__DIR__, 3) . '/includes/header.php';
                 <!-- Main Blog Post -->
                 <article class="blog-post">
 
-                    <img src="assets/images/ai-chat-open-on-phone.webp" alt="" class="AI tool app open on a phone" />
+                    <img src="assets/images/ai-chat-open-on-phone.webp" alt="AI tool app open on a phone" class="post-image" />
                     <h3 class="blog-subtitle">Practical Tips and Real Limitations</h3>
                     <!-- Insert the dynamic publish date here -->
                     <p class="post-meta">Published on <?php echo date('F j, Y', strtotime($publishDate)); ?> • by <img class="cherry-icon" src="/assets/images/favicon.webp" style="height: 20px; vertical-align: middle;" alt="icon" alt="a cherry"></p>
