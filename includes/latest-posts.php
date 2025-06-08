@@ -33,24 +33,31 @@ function buildPostsArray()
                 $title = ucwords(str_replace(['-', '_', '.php'], [' ', ' ', ''], $fileInfo->getFilename()));
             }
 
+            // Extract first <img> tag's src and alt, regardless of attribute order
+            $image = '/assets/images/default-thumbnail.webp';
+            $alt = 'Post image';
 
-            // Extract first <img> tag's src and alt
-            if (preg_match('/<img[^>]+src=["\']([^"\']+)["\'][^>]*alt=["\']([^"\']*)["\']/i', $content, $imgMatch)) {
-                $image = $imgMatch[1];
-                $alt = $imgMatch[2];
-            } else {
-                $image = '/assets/images/default-thumbnail.webp';
-                $alt = 'Post image';
+            if (
+                preg_match('/<img[^>]*\s+src=["\']([^"\']+)["\'][^>]*\s+alt=["\']([^"\']*)["\'][^>]*>/i', $content, $imgMatch) ||
+                preg_match('/<img[^>]*\s+alt=["\']([^"\']*)["\'][^>]*\s+src=["\']([^"\']+)["\'][^>]*>/i', $content, $imgAltFirst)
+            ) {
+                if (!empty($imgMatch)) {
+                    $image = $imgMatch[1];
+                    $alt = $imgMatch[2];
+                } elseif (!empty($imgAltFirst)) {
+                    $alt = $imgAltFirst[1];
+                    $image = $imgAltFirst[2];
+                }
             }
 
+            // Extract publish date
             if (preg_match('/\$publishDate\s*=\s*[\'"]([^\'"]+)[\'"]\s*;/', $content, $dateMatch)) {
                 $date = date('d-m-Y H:i:s', strtotime($dateMatch[1]));
             } else {
                 $date = date('d-m-Y H:i:s', $fileInfo->getMTime());
             }
 
-
-            // Extract category from relative path - assuming structure: /blog/2025/Month/category/post.php
+            // Extract category from path (assuming /blog/2025/Month/Category/post.php)
             $pathParts = explode('/', trim($relativePath, '/'));
             $category = isset($pathParts[4]) ? $pathParts[4] : 'uncategorized';
 
@@ -65,7 +72,7 @@ function buildPostsArray()
         }
     }
 
-    // Sort posts by newest date first
+    // Sort posts by newest first
     usort($posts, function ($a, $b) {
         return strtotime($b['date']) - strtotime($a['date']);
     });

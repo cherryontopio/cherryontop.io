@@ -5,13 +5,30 @@ $allPosts = getAllPosts();
 
 // Filter posts by category 'wordcraft'
 $wordcraftPosts = array_values(array_filter($allPosts, function ($post) {
-    return isset($post['category']) && strtolower(trim($post['category'])) === 'wordcraft';
+  return isset($post['category']) && strtolower(trim($post['category'])) === 'wordcraft';
 }));
 
 // Sort posts by date descending (newest first)
 usort($wordcraftPosts, function ($a, $b) {
-    return strtotime($b['date']) - strtotime($a['date']);
+  return strtotime($b['date']) - strtotime($a['date']);
 });
+
+// Helper function to extract $pageTitle from the PHP blog post file
+function getPostTitleFromFile($postLink)
+{
+  $fullPath = $_SERVER['DOCUMENT_ROOT'] . $postLink;
+  if (!file_exists($fullPath)) {
+    return null;
+  }
+  $content = file_get_contents($fullPath);
+
+  // Extract $pageTitle = "..."
+  if (preg_match('/\$pageTitle\s*=\s*[\'"](.+?)[\'"]\s*;/', $content, $match)) {
+    return $match[1];
+  }
+
+  return null;
+}
 ?>
 
 <section class="category-post-content">
@@ -21,12 +38,15 @@ usort($wordcraftPosts, function ($a, $b) {
     </div>
     <div class="post-card-container">
       <?php foreach ($wordcraftPosts as $post): ?>
+        <?php
+        $realTitle = getPostTitleFromFile($post['link'] ?? '') ?: ($post['title'] ?? 'Untitled');
+        ?>
         <div class="post-card-item">
           <img src="<?= htmlspecialchars($post['image'] ?? '') ?>" alt="<?= htmlspecialchars($post['alt'] ?? '') ?>">
           <div class="post-card-info">
             <h3 class="post-card-heading">
               <a href="<?= htmlspecialchars($post['link'] ?? '#') ?>">
-                <?= htmlspecialchars($post['title'] ?? 'Untitled') ?>
+                <?= htmlspecialchars($realTitle) ?>
               </a>
             </h3>
             <p class="post-card-excerpt"><?= htmlspecialchars($post['excerpt'] ?? '') ?></p>
