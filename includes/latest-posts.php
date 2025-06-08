@@ -25,12 +25,13 @@ function buildPostsArray()
 
             $content = file_get_contents($filePath);
 
-            // Extract <h2> title
-            if (preg_match('/<h2[^>]*>(.*?)<\/h2>/is', $content, $titleMatch)) {
-                $title = strip_tags($titleMatch[1]);
+            // Extract $pageTitle from the PHP file
+            if (preg_match('/\$pageTitle\s*=\s*[\'"]([^\'"]+)[\'"]\s*;/', $content, $titleMatch)) {
+                $title = $titleMatch[1];
             } else {
                 $title = ucwords(str_replace(['-', '_', '.php'], [' ', ' ', ''], $fileInfo->getFilename()));
             }
+
 
             // Extract first <img> tag's src and alt
             if (preg_match('/<img[^>]+src=["\']([^"\']+)["\'][^>]*alt=["\']([^"\']*)["\']/i', $content, $imgMatch)) {
@@ -41,7 +42,12 @@ function buildPostsArray()
                 $alt = 'Post image';
             }
 
-            $date = date('d-m-Y H:i:s', $fileInfo->getMTime());
+            if (preg_match('/\$publishDate\s*=\s*[\'"]([^\'"]+)[\'"]\s*;/', $content, $dateMatch)) {
+                $date = date('d-m-Y H:i:s', strtotime($dateMatch[1]));
+            } else {
+                $date = date('d-m-Y H:i:s', $fileInfo->getMTime());
+            }
+
 
             // Extract category from relative path - assuming structure: /blog/2025/Month/category/post.php
             $pathParts = explode('/', trim($relativePath, '/'));
