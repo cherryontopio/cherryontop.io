@@ -2,54 +2,60 @@
 $cacheFile = __DIR__ . '/cache/latest-posts.json';
 $cacheDuration = 600; // 10 minutes in seconds
 
-function buildPostsArray() {
-    $blogDir = $_SERVER['DOCUMENT_ROOT'] . '/blog/2025/May/';
+function buildPostsArray()
+{
+    $baseDir = $_SERVER['DOCUMENT_ROOT'] . '/blog/2025/';
     $posts = [];
 
-    $iterator = new RecursiveIteratorIterator(
-        new RecursiveDirectoryIterator($blogDir, FilesystemIterator::SKIP_DOTS)
-    );
+    foreach (new DirectoryIterator($baseDir) as $monthDir) {
+        if (!$monthDir->isDir() || $monthDir->isDot()) continue;
 
-    foreach ($iterator as $fileInfo) {
-        if (!$fileInfo->isFile()) continue;
-        if (pathinfo($fileInfo->getFilename(), PATHINFO_EXTENSION) !== 'php') continue;
+        $monthPath = $monthDir->getPathname();
 
-        $filePath = $fileInfo->getPathname();
-        $relativePath = str_replace($_SERVER['DOCUMENT_ROOT'], '', $filePath);
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($monthPath, FilesystemIterator::SKIP_DOTS)
+        );
 
-        $content = file_get_contents($filePath);
+        foreach ($iterator as $fileInfo) {
+            if (!$fileInfo->isFile()) continue;
+            if (pathinfo($fileInfo->getFilename(), PATHINFO_EXTENSION) !== 'php') continue;
 
-        // Extract <h2> title
-        if (preg_match('/<h2[^>]*>(.*?)<\/h2>/is', $content, $titleMatch)) {
-            $title = strip_tags($titleMatch[1]);
-        } else {
-            $title = ucwords(str_replace(['-', '_', '.php'], [' ', ' ', ''], $fileInfo->getFilename()));
+            $filePath = $fileInfo->getPathname();
+            $relativePath = str_replace($_SERVER['DOCUMENT_ROOT'], '', $filePath);
+
+            $content = file_get_contents($filePath);
+
+            // Extract <h2> title
+            if (preg_match('/<h2[^>]*>(.*?)<\/h2>/is', $content, $titleMatch)) {
+                $title = strip_tags($titleMatch[1]);
+            } else {
+                $title = ucwords(str_replace(['-', '_', '.php'], [' ', ' ', ''], $fileInfo->getFilename()));
+            }
+
+            // Extract first <img> tag's src and alt
+            if (preg_match('/<img[^>]+src=["\']([^"\']+)["\'][^>]*alt=["\']([^"\']*)["\']/i', $content, $imgMatch)) {
+                $image = $imgMatch[1];
+                $alt = $imgMatch[2];
+            } else {
+                $image = '/assets/images/default-thumbnail.webp';
+                $alt = 'Post image';
+            }
+
+            $date = date('d-m-Y H:i:s', $fileInfo->getMTime());
+
+            // Extract category from relative path - assuming structure: /blog/2025/Month/category/post.php
+            $pathParts = explode('/', trim($relativePath, '/'));
+            $category = isset($pathParts[4]) ? $pathParts[4] : 'uncategorized';
+
+            $posts[] = [
+                'title' => $title,
+                'link' => $relativePath,
+                'image' => $image,
+                'alt' => $alt,
+                'date' => $date,
+                'category' => $category,
+            ];
         }
-
-        // Extract first <img> tag's src and alt
-        if (preg_match('/<img[^>]+src=["\']([^"\']+)["\'][^>]*alt=["\']([^"\']*)["\']/i', $content, $imgMatch)) {
-            $image = $imgMatch[1];
-            $alt = $imgMatch[2];
-        } else {
-            $image = '/assets/images/default-thumbnail.webp';
-            $alt = 'Post image';
-        }
-
-        // <-- CHANGE here to include time
-        $date = date('d-m-Y H:i:s', $fileInfo->getMTime());
-
-        // Extract category from relative path - assuming structure: /blog/2025/May/category/post.php
-        $pathParts = explode('/', trim($relativePath, '/'));
-        $category = isset($pathParts[4]) ? $pathParts[4] : 'uncategorized';
-
-        $posts[] = [
-            'title' => $title,
-            'link' => $relativePath,
-            'image' => $image,
-            'alt' => $alt,
-            'date' => $date,
-            'category' => $category,
-        ];
     }
 
     // Sort posts by newest date first
