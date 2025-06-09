@@ -1273,6 +1273,13 @@ body {
   text-align: center;
 }
 
+.pages-subtitle-h3 {
+  margin-bottom: 0px;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+
 /* Content wrapper holds post + sidebar */
 .content-container {
   display: flex;
