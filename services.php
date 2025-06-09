@@ -69,7 +69,7 @@ if (file_exists($headerPath)) {
       <span class="highlight" data-tooltip="Extraordinary digital presence ensures lasting influence and success in your industry.">It’s time to create something extraordinary.</span>
     </p>
     <br><br><br><br>
-    <h3 class="pages-subtitle-h3"><em>"Let’s shape a brand, a website, and a product that works as hard as you do."</h3>
+    <h3 class="pages-subtitle"><em>"Let’s shape a brand, a website, and a product that works as hard as you do. </em></h3>
 
 
 
