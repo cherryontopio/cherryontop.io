@@ -49,7 +49,7 @@ if (file_exists($headerPath)) {
                 If you're ready to build a brand and digital presence that stands out, <a href="/contact.php">let’s bring your ideas to life!</a>
             </p>
 
-            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="iveta-c" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://uk.linkedin.com/in/iveta-c?trk=profile-badge">Yvette C</a></div>
+            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="iveta-c" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://uk.linkedin.com/in/iveta-c?trk=profile-badge"></a></div>
 
 
         </div>

@@ -15,58 +15,6 @@ function toggleMenu() {
   navbarLinks.classList.toggle("active");
 }
 
-// SEARCH BAR FUNCTIONALITY
-function filterPosts() {
-  const searchInput = document.getElementById("search-input");
-  if (!searchInput) return; // Prevent errors if input doesn't exist
-
-  const query = searchInput.value.toLowerCase().trim();
-  const posts = document.querySelectorAll(".post-card-item");
-  const noResults = document.getElementById("no-results");
-
-  let anyVisible = false;
-
-  posts.forEach((post) => {
-    const title =
-      post.querySelector(".post-card-heading")?.textContent.toLowerCase() || "";
-    const excerpt =
-      post.querySelector(".post-card-excerpt")?.textContent.toLowerCase() || "";
-    const isMatch =
-      query === "" || title.includes(query) || excerpt.includes(query);
-
-    post.style.display = isMatch ? "block" : "none";
-    if (isMatch) anyVisible = true;
-  });
-
-  if (noResults) {
-    noResults.style.display = anyVisible ? "none" : "block";
-  }
-}
-
-// Attach event listeners efficiently
-document.addEventListener("DOMContentLoaded", function () {
-  const searchInput = document.getElementById("search-input");
-  const searchButton = document.getElementById("search-button");
-
-  if (searchInput) {
-    searchInput.addEventListener("input", filterPosts);
-    searchInput.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        filterPosts();
-      }
-    });
-  } else {
-    console.error("Element #search-input not found!");
-  }
-
-  if (searchButton) {
-    searchButton.addEventListener("click", filterPosts);
-  } else {
-    console.error("Element #search-button not found!");
-  }
-});
-
 // SUBSCRIBE FORM FUNCTIONALITY
 const form = document.getElementById("subscription-form");
 const messageDiv = document.getElementById("subscription-message");
