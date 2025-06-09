@@ -1,6 +1,6 @@
 <?php
 // Set the page title dynamically based on the current script name
-$pageTitle = basename(__FILE__, '.php') === 'index' ? "Welcome to My Website" : "Our Services";
+$pageTitle = basename(__FILE__, '.php') === 'index' ? "Welcome to My Website" : "Services";
 
 // Define the correct path to the header file
 $headerPath = __DIR__ . '/includes/header.php';
@@ -44,7 +44,7 @@ if (file_exists($headerPath)) {
 
     <p class="spacer"></p>
 
-    <p class="centered-p">
+    <p class="larger-letters">
       Your <span class="highlight" data-tooltip="Digital presence refers to how your brand appears across online platforms, including websites, social media, and search engines.">digital presence</span> is more than just a <span class="highlight" data-tooltip="A website is a structured collection of digital pages that serve as a business or personal hub for information, services, or commerce.">website</span> or a <span class="highlight" data-tooltip="A brand is the unique identity of a business, consisting of its messaging, visuals, and values.">brand</span>—it’s the gateway to <span class="highlight" data-tooltip="Meaningful connections refer to customer relationships built through trust, engagement, and value-driven interaction.">meaningful connections</span>, <span class="highlight" data-tooltip="Lasting impressions are the memorable aspects of your brand that keep people coming back.">lasting impressions</span>, and <span class="highlight" data-tooltip="Business growth includes increased revenue, audience reach, and market influence.">real business growth</span>.
       <br><br>
 
