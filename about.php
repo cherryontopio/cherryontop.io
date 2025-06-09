@@ -29,26 +29,28 @@ if (file_exists($headerPath)) {
         <h3 hidden class="pages-subtitle"></h3>
 
         <div class="content-container">
-            <section id="about">
-
-                <p class="larger-letters">
-                    I specialize in strategic branding, powerful websites, and scalable digital products, helping businesses transform their online presence into high-impact, conversion-driven experiences.
-                    With a keen eye for design, user experience, and storytelling, I craft websites that don’t just look great—they function seamlessly to guide visitors toward action, building trust and engagement along the way.
-                </p>
-                <br><br>
-                <p class="larger-letters">
-                    Your brand is more than just a logo—it’s the essence of your business, the story you tell, and the way people remember you.
-                    I refine brand messaging to elevate authority, attract ideal clients, and enhance engagement, ensuring every piece of content aligns with your unique identity and business goals.
-                    Whether structuring e-books, courses, or digital assets, I help craft content that is optimized for scalability, impact, and long-term success.
-                </p>
-                <br><br>
-                <p class="larger-letters">
-                    My approach blends creativity and precision, combining AI-powered tools with human-driven strategy to streamline workflows, optimize design, and accelerate growth.
-                    Every website, branding project, and digital product I create is designed to be functional, visually compelling, and strategically positioned for success.
-                    If you're ready to build a brand and digital presence that stands out, <a href="/contact.php">let’s bring your ideas to life!</a>
-                </p>
+            div class="content-container">
 
 
+            <p class="larger-letters">
+                I specialize in strategic branding, powerful websites, and scalable digital products, helping businesses transform their online presence into high-impact, conversion-driven experiences.
+                With a keen eye for design, user experience, and storytelling, I craft websites that don’t just look great—they function seamlessly to guide visitors toward action, building trust and engagement along the way.
+            </p>
+            <br><br>
+            <p class="larger-letters">
+                Your brand is more than just a logo—it’s the essence of your business, the story you tell, and the way people remember you.
+                I refine brand messaging to elevate authority, attract ideal clients, and enhance engagement, ensuring every piece of content aligns with your unique identity and business goals.
+                Whether structuring e-books, courses, or digital assets, I help craft content that is optimized for scalability, impact, and long-term success.
+            </p>
+            <br><br>
+            <p class="larger-letters">
+                My approach blends creativity and precision, combining AI-powered tools with human-driven strategy to streamline workflows, optimize design, and accelerate growth.
+                Every website, branding project, and digital product I create is designed to be functional, visually compelling, and strategically positioned for success.
+                If you're ready to build a brand and digital presence that stands out, <a href="/contact.php">let’s bring your ideas to life!</a>
+            </p>
+
+
+        </div>
         </div>
     </main>
 
