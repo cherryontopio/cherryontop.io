@@ -4,7 +4,7 @@ echo '
 <div class="contact-form-section">
   <div class="contact-form-container">
     <h3>Send me a message</h3>
-    <form action="/includes/contact-form-handler.php" method="POST" class="contact-form" novalidate>
+    <form action="https://cherryontop.io/includes/contact-form-handler.php" method="POST" class="contact-form" novalidate>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name">
 

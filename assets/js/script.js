@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const statusMessage = document.createElement("p");
     statusMessage.style.marginTop = "10px";
 
-    fetch("contact-form-handler.php", {
+    fetch("https://cherryontop.io/includes/contact-form-handler.php", {
       method: "POST",
       body: formData,
     })
