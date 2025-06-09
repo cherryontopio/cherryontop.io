@@ -16,38 +16,54 @@ function toggleMenu() {
 }
 
 // SEARCH BAR FUNCTIONALITY
-function filterPosts() {
-  const query = document
-    .getElementById("search-input")
-    .value.toLowerCase()
-    .trim();
-  const posts = document.querySelectorAll(".post-card-item");
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("search-input");
+  const searchButton = document.getElementById("search-button");
   const noResults = document.getElementById("no-results");
 
-  let anyVisible = false;
+  function filterPosts() {
+    if (!searchInput) return; // Prevent errors if input doesn't exist
 
-  posts.forEach((post) => {
-    const title =
-      post.querySelector(".post-card-heading")?.textContent.toLowerCase() || "";
-    const excerpt =
-      post.querySelector(".post-card-excerpt")?.textContent.toLowerCase() || "";
-    const isMatch =
-      query === "" || title.includes(query) || excerpt.includes(query);
+    const query = searchInput.value.toLowerCase().trim();
+    const posts = document.querySelectorAll(".post-card-item");
 
-    post.style.display = isMatch ? "block" : "none";
-    if (isMatch) anyVisible = true;
-  });
+    let anyVisible = false;
 
-  noResults.style.display = anyVisible ? "none" : "block";
-}
+    posts.forEach((post) => {
+      const title =
+        post.querySelector(".post-card-heading")?.textContent.toLowerCase() ||
+        "";
+      const excerpt =
+        post.querySelector(".post-card-excerpt")?.textContent.toLowerCase() ||
+        "";
+      const isMatch =
+        query === "" || title.includes(query) || excerpt.includes(query);
 
-// Attach event listeners efficiently
-document.getElementById("search-input").addEventListener("input", filterPosts);
-document.getElementById("search-button").addEventListener("click", filterPosts);
-document.getElementById("search-input").addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    filterPosts();
+      post.style.display = isMatch ? "block" : "none";
+      if (isMatch) anyVisible = true;
+    });
+
+    if (noResults) {
+      noResults.style.display = anyVisible ? "none" : "block";
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", filterPosts);
+    searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        filterPosts();
+      }
+    });
+  } else {
+    console.error("Element #search-input not found!");
+  }
+
+  if (searchButton) {
+    searchButton.addEventListener("click", filterPosts);
+  } else {
+    console.error("Element #search-button not found!");
   }
 });
 
