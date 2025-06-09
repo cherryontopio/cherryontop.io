@@ -1,9 +1,9 @@
 <?php
 $navLinks = [
-    ['label' => 'Home', 'href' => '/index.php'],
-    ['label' => 'About', 'href' => '/about.php'],
-    ['label' => 'Services', 'href' => '/services.php'],
-    ['label' => 'Contact', 'href' => '/contact.php']
+  ['label' => 'Home', 'href' => '/index.php'],
+  ['label' => 'About', 'href' => '/about.php'],
+  ['label' => 'Services', 'href' => '/services.php'],
+  ['label' => 'Contact', 'href' => '/contact.php']
 ];
 
 // Get the current URL path (e.g., "/about.php")
@@ -61,10 +61,10 @@ echo '
     <!-- Navigation Links on the Right -->
     <div class="navbar-links">
       <ul>';
-        foreach ($navLinks as $link) {
-            $isActive = ($link["href"] === $currentPath) ? " class=\"active\"" : "";
-            echo '<li><a href="' . $link["href"] . '"' . $isActive . '>' . $link["label"] . '</a></li>';
-        }
+foreach ($navLinks as $link) {
+  $isActive = ($link["href"] === $currentPath) ? " class=\"active\"" : "";
+  echo '<li><a href="' . $link["href"] . '"' . $isActive . '>' . $link["label"] . '</a></li>';
+}
 echo '
       </ul>
     </div>
@@ -72,8 +72,7 @@ echo '
 </header>
 
 <!-- ✨ Tagline section -->
-<section class="site-tagline" ><h2>Tech insights, small builds & clear explanations.</h2>
-  <p > Open to freelance tech writing, automation, and digital consulting.</p>
+<section class="site-tagline" ><h2>Smart Branding, Dynamic Websites <br>& Scalable Products.</h2>
+    <p></p>
 </section>
 ';
-?>
