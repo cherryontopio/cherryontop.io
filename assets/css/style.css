@@ -1397,30 +1397,60 @@ body {
 
 .highlight {
   color: darkred;
-  font-weight: normal;
+  font-weight: 600;
   position: relative;
   cursor: pointer;
   text-decoration: underline;
 }
 
 .highlight::after {
-  content: attr(data-tooltip);
+  content: attr(data-tooltip); /* Display tooltip text */
   position: absolute;
   left: 50%;
   top: -40px;
   transform: translateX(-50%);
-  background-color: #222;
+  background-color: darkgoldenrod;
   color: #fff;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-size: 14px;
-  white-space: nowrap;
+  padding: 20px;
+  border-radius: 30px;
+  font-size: 30px;
+  font-family: "Rock Salt";
+  white-space: normal;
+  width: fit-content;
+  max-width: 700px;
+  word-wrap: break-word;
+  text-align: center;
   display: none;
   z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  overflow-wrap: break-word;
 }
 
+/* Show tooltip on hover */
 .highlight:hover::after {
-  display: block;
+  display: inline-block;
+  opacity: 1;
+  animation: wavePop 0.6s ease-in-out;
+}
+
+/* Wave pop animation */
+@keyframes wavePop {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-10px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-15px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-10px) rotate(-3deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 /* Default State: Title */

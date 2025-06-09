@@ -45,35 +45,29 @@ if (file_exists($headerPath)) {
     <p class="spacer"></p>
 
     <p class="larger-letters">
-      Your <span class="highlight" data-tooltip="Digital presence refers to how your brand appears across online platforms, including websites, social media, and search engines.">digital presence</span> is more than just a <span class="highlight" data-tooltip="A website is a structured collection of digital pages that serve as a business or personal hub for information, services, or commerce.">website</span> or a <span class="highlight" data-tooltip="A brand is the unique identity of a business, consisting of its messaging, visuals, and values.">brand</span>—it’s the gateway to <span class="highlight" data-tooltip="Meaningful connections refer to customer relationships built through trust, engagement, and value-driven interaction.">meaningful connections</span>, <span class="highlight" data-tooltip="Lasting impressions are the memorable aspects of your brand that keep people coming back.">lasting impressions</span>, and <span class="highlight" data-tooltip="Business growth includes increased revenue, audience reach, and market influence.">real business growth</span>.
+      Your <span class="highlight" data-tooltip="How your brand appears online.">digital presence</span> is more than just a <span class="highlight" data-tooltip="Your digital home.">website</span> or a <span class="highlight" data-tooltip="Your unique identity.">brand</span>—it’s the gateway to meaningful connections, lasting impressions, and real business growth.
       <br><br>
 
-      But in a crowded online world, <span class="highlight" data-tooltip="Standing out refers to differentiating your brand from competitors through unique visuals, messaging, and strategy.">standing out</span> takes more than just <span class="highlight" data-tooltip="Good design integrates aesthetics and functionality to create a seamless digital experience.">good design</span>; it requires <span class="highlight" data-tooltip="Strategy is a structured approach to achieving business goals through planning and execution.">strategy</span>, <span class="highlight" data-tooltip="Storytelling in branding is the art of conveying a compelling narrative that resonates with audiences.">storytelling</span>, and <span class="highlight" data-tooltip="The right tools include platforms, frameworks, and technologies that help optimize digital presence.">the right tools</span> to bring ideas to life.
+      But in a crowded online world, standing out takes more than just good design; it requires strategy, storytelling, and the right tools to bring ideas to life.
       <br><br>
 
-      Imagine having a <span class="highlight" data-tooltip="An optimized website ensures user-friendly design, fast loading times, and seamless navigation.">website</span> that doesn’t just look <span class="highlight" data-tooltip="A visually pleasing website should also be functionally strong, guiding visitors toward desired actions.">beautiful</span> but works <span class="highlight" data-tooltip="Effortless navigation means intuitive design that leads users to engage with content or services without confusion.">effortlessly</span> to guide visitors toward action, turning <span class="highlight" data-tooltip="Engaged clients are those who interact with your brand, whether through purchases, subscriptions, or inquiries.">passive browsers into engaged clients</span>.
+      Imagine having a website that doesn’t just look beautiful but works effortlessly to guide visitors toward action, turning passive browsers into engaged clients.
       <br><br>
 
-      Picture a <span class="highlight" data-tooltip="Personal branding is crafting a distinct online identity that reflects expertise and personality.">personal brand</span> so clearly defined that every <span class="highlight" data-tooltip="Your brand’s messaging consists of written, visual, and interactive elements that convey your mission.">word, image, and interaction</span> builds <span class="highlight" data-tooltip="Trust and authority are established through consistency, expertise, and genuine engagement.">trust and authority</span>.
+      Picture a personal brand so clearly defined that every word, image, and interaction builds trust and authority.
       <br><br>
 
-      And think of the <span class="highlight" data-tooltip="Your potential refers to untapped opportunities for growth and influence in your industry.">potential</span> locked within your <span class="highlight" data-tooltip="Expertise consists of specialized knowledge, skills, and experience in a given industry.">expertise</span>—knowledge that, when <span class="highlight" data-tooltip="Digital products like e-books and courses allow businesses to package knowledge into scalable content.">structured into digital products</span> like <span class="highlight" data-tooltip="An e-book is a downloadable publication designed to inform, educate, or entertain.">e-books</span> or <span class="highlight" data-tooltip="An online course is a structured educational program accessible through digital platforms.">online courses</span>, can <span class="highlight" data-tooltip="Scaling beyond limits means expanding reach and revenue opportunities without geographical restrictions.">scale beyond limits</span>, creating <span class="highlight" data-tooltip="Impact refers to measurable influence, engagement, and results generated by digital products.">impact</span> long after the first sale.
+      And think of the potential locked within your expertise — knowledge that, when structured into digital products like e-books or online courses, can scale beyond limits, creating impact long after the first sale.
       <br><br>
 
-      I bring together <span class="highlight" data-tooltip="Creativity fuels innovation, while precision ensures accuracy in execution.">creativity and precision</span> to craft <span class="highlight" data-tooltip="Digital experiences include websites, branding, and content that engage users and drive conversions.">digital experiences</span> that do more than exist—they <span class="highlight" data-tooltip="Thrive means sustaining success through ongoing optimization and engagement.">thrive</span>.
+      I bring together creativity and precision to craft digital experiences that do more than exist—they thrive.
       <br><br>
 
-      Through <span class="highlight" data-tooltip="Thoughtful design integrates aesthetics, usability, and brand consistency.">thoughtful design</span>, <span class="highlight" data-tooltip="Strategic messaging aligns branding and marketing to create a cohesive customer journey.">strategic messaging</span>, and <span class="highlight" data-tooltip="AI-powered efficiency automates processes, optimizes content, and enhances user engagement.">AI-powered efficiency</span>, I help <span class="highlight" data-tooltip="Entrepreneurs and businesses benefit from tailored solutions that address growth challenges.">entrepreneurs and businesses</span> transform ideas into <span class="highlight" data-tooltip="Scalable assets are digital products that generate long-term value with minimal ongoing effort.">powerful, scalable assets</span> that <span class="highlight" data-tooltip="Driving results means achieving conversions, customer engagement, and brand recognition.">drive results</span>.
+      Through thoughtful design strategic messaging, and AI-powered efficiency, I help entrepreneurs and businesses transform ideas into powerful, scalable assets that drive results.
       <br><br>
 
-      <span class="highlight" data-tooltip="Extraordinary digital presence ensures lasting influence and success in your industry.">It’s time to create something extraordinary.</span>
+      <span class="highlight" data-tooltip="Let’s shape a brand, a website, and a product that works as hard as you do."> It’s time to create something extraordinary.</span>
     </p>
-    <br><br><br><br>
-    <h3 class="pages-subtitle"><em>"Let’s shape a brand, a website, and a product that works as hard as you do. </em></h3>
-
-
-
-
 
   </main>
 
