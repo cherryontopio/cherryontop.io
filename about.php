@@ -29,7 +29,7 @@ if (file_exists($headerPath)) {
         <h3 hidden class="pages-subtitle"></h3>
 
         <div class="content-container">
-            div class="content-container">
+
 
 
             <p class="larger-letters">

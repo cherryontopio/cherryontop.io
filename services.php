@@ -1,6 +1,6 @@
 <?php
 // Set the page title dynamically based on the current script name
-$pageTitle = basename(__FILE__, '.php') === 'index' ? "Welcome to My Website" : "Services";
+$pageTitle = basename(__FILE__, '.php') === 'index' ? "Welcome to My Website" : " Services";
 
 // Define the correct path to the header file
 $headerPath = __DIR__ . '/includes/header.php';
