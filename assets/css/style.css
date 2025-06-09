@@ -1413,10 +1413,11 @@ body {
   color: #fff;
   padding: 20px;
   border-radius: 30px;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Rock Salt";
   white-space: normal;
   width: fit-content;
+  min-width: 300px; /* ✅ Prevents it from being too narrow */
   max-width: 700px;
   word-wrap: break-word;
   text-align: center;
