@@ -1129,13 +1129,13 @@ body {
 
   .blog-post {
     flex: 1 1 auto;
-    max-width: 65%; /* Blog post slightly wider */
+    max-width: 60%; /* Blog post slightly wider */
     align-self: center; /* Optional: centers the post nicely */
   }
 
   .sidebar {
     flex: 1 1 auto;
-    max-width: 33%; /* Still wide but slightly narrower */
+    max-width: 35%; /* Still wide but slightly narrower */
     margin-top: 20px;
     align-self: center;
   }
