@@ -1107,12 +1107,11 @@ body {
 }
 
 /* Responsive design */
-
 @media (max-width: 768px) {
   .post-title-fullwidth {
     font-size: 60px;
-    margin-top: 100px;
-    margin-bottom: 70px;
+    margin-top: 70px;
+    margin-bottom: 50px;
   }
 
   .blog-subtitle {
@@ -1131,13 +1130,29 @@ body {
   .social-share-title {
     font-size: 24px;
   }
+
+  /* Adjust layout for small screens */
+  .content-wrapper {
+    flex-direction: column; /* Stack content and sidebar */
+    gap: 20px; /* Reduce gap between content and sidebar */
+  }
+
+  .blog-post {
+    flex: 1 1 100%; /* Blog post takes full width */
+  }
+
+  .sidebar {
+    flex: 1 1 100%; /* Sidebar takes full width */
+    max-width: 100%; /* Ensure sidebar is flexible */
+    margin-top: 20px; /* Space between content and sidebar */
+  }
 }
 
 @media (max-width: 480px) {
   .post-title-fullwidth {
     font-size: 40px;
-    margin-top: 70px;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 30px;
   }
 
   .blog-subtitle {
@@ -1155,6 +1170,15 @@ body {
 
   .social-share-title {
     font-size: 20px;
+  }
+
+  /* Adjust font size of meta text for smaller screens */
+  .post-meta {
+    font-size: 0.8rem;
+  }
+
+  .content-wrapper {
+    gap: 20px;
   }
 }
 
