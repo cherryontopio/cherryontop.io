@@ -84,32 +84,37 @@ function showMessage(msg, color) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".contact-form");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
 
-    const formData = new FormData(form);
-    const statusMessage = document.createElement("p");
-    statusMessage.style.marginTop = "10px";
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    fetch("https://cherryontop.io/includes/contact-form-handler.php", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.text())
-      .then((text) => {
-        statusMessage.textContent = text;
-        if (text.toLowerCase().includes("thank")) {
-          statusMessage.style.color = "green";
-          form.reset();
-        } else {
-          statusMessage.style.color = "red";
-        }
-        form.appendChild(statusMessage);
+      const formData = new FormData(form);
+      const statusMessage = document.createElement("p");
+      statusMessage.style.marginTop = "10px";
+
+      fetch("https://cherryontop.io/includes/contact-form-handler.php", {
+        method: "POST",
+        body: formData,
       })
-      .catch(() => {
-        statusMessage.textContent = "Oops! Something went wrong.";
-        statusMessage.style.color = "red";
-        form.appendChild(statusMessage);
-      });
-  });
+        .then((response) => response.text())
+        .then((text) => {
+          statusMessage.textContent = text;
+          if (text.toLowerCase().includes("thank")) {
+            statusMessage.style.color = "green";
+            form.reset();
+          } else {
+            statusMessage.style.color = "red";
+          }
+          form.appendChild(statusMessage);
+        })
+        .catch(() => {
+          statusMessage.textContent = "Oops! Something went wrong.";
+          statusMessage.style.color = "red";
+          form.appendChild(statusMessage);
+        });
+    });
+  } else {
+    console.error("Element with class '.contact-form' not found.");
+  }
 });
