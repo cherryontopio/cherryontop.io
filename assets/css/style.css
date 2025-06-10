@@ -1128,16 +1128,15 @@ body {
   }
 
   .blog-post {
-    flex: 1 1 auto;
+    flex: 1 1 65;
     max-width: 60%; /* Blog post slightly wider */
     align-self: center; /* Optional: centers the post nicely */
   }
 
   .sidebar {
-    flex: 1 1 auto;
-    max-width: 35%; /* Still wide but slightly narrower */
+    flex: 1 1 30;
+    max-width: 32%; /* Still wide but slightly narrower */
     margin-top: 20px;
-    align-self: center;
   }
 }
 
