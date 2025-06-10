@@ -1132,7 +1132,7 @@ body {
   }
 
   .social-share a i {
-    font-size: 14px; /* Smaller icon size */
+    font-size: 30px; /* Smaller icon size */
   }
 
   .social-share-title {
@@ -1147,7 +1147,7 @@ body {
   }
 
   .social-share-pages a i {
-    font-size: 15px; /* Smaller icon size */
+    font-size: 30px; /* Smaller icon size */
   }
 
   .social-share-pages a {
@@ -1189,7 +1189,7 @@ body {
 
   /* Social Share Icons */
   .social-share {
-    gap: 10px;
+    gap: 20px;
     margin: 20px 0;
     /* Further reduced icon size */
   }
@@ -1204,13 +1204,13 @@ body {
 
   /* Social Share Pages */
   .social-share-pages {
-    gap: 10px;
+    gap: 15px;
     margin: 20px 0;
     /* Further reduced icon size */
   }
 
   .social-share-pages a i {
-    font-size: 14px; /* Even smaller icon size */
+    font-size: 30px; /* Even smaller icon size */
   }
 
   .social-share-pages a {
