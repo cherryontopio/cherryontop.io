@@ -10,8 +10,8 @@
             </div>
         </div>
 
-        <form id="subscription-form" action="/includes/subscribe.php" method="POST">
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <form id="subscription-form" action="/includes/subscribe.php" method="POST" autocomplete="on">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
             <button type="submit">Subscribe</button>
         </form>
 
