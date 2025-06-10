@@ -1141,13 +1141,13 @@ body {
 
   /* Social Share Pages */
   .social-share-pages {
-    gap: 15px;
+    gap: 10px;
     margin: 30px 0;
     /* Reduced icon size */
   }
 
   .social-share-pages a i {
-    font-size: 1.8em; /* Smaller icon size */
+    font-size: 20px; /* Smaller icon size */
   }
 
   .social-share-pages a {
@@ -1210,7 +1210,7 @@ body {
   }
 
   .social-share-pages a i {
-    font-size: 1.2em; /* Even smaller icon size */
+    font-size: 14px; /* Even smaller icon size */
   }
 
   .social-share-pages a {
@@ -1235,7 +1235,7 @@ body {
 /* Social share icons */
 .social-share {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
   margin: 70px 0;
 }
