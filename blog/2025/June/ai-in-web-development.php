@@ -44,7 +44,7 @@ include dirname(__DIR__, 3) . '/includes/header.php';
           </p>
 
           <div class="post-content">
-
+            <?php include dirname(__DIR__, 3) . '/includes/social-share.php'; ?>
 
             <p>Web development has always been about coding. Developers spent years mastering languages like HTML, CSS, and JavaScript to build functional and visually appealing websites. But things are changing fast. Today, artificial intelligence is reshaping the way websites are created, making the process less about writing code from scratch and more about knowing how to use AI effectively.</p>
 

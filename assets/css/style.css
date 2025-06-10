@@ -910,7 +910,7 @@ body {
 
 /* Blog post */
 .blog-post {
-  flex: 1 1 0;
+  flex: 14 1 0;
   min-width: 0; /* Critical: allows shrinking inside flex */
   overflow-wrap: break-word; /* Allow breaking long words */
   word-break: break-word;
@@ -1112,7 +1112,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive design */
+/* Responsive design for screens smaller than 768px */
 @media (max-width: 768px) {
   .post-title-fullwidth {
     font-size: 60px;
@@ -1124,20 +1124,41 @@ body {
     font-size: 30px !important;
   }
 
+  /* Social Share Icons */
   .social-share {
     gap: 15px;
     margin: 30px 0;
+    /* Reduced icon size */
   }
 
   .social-share a i {
-    font-size: 2em;
+    font-size: 1.8em; /* Smaller icon size */
   }
 
   .social-share-title {
     font-size: 24px;
   }
 
-  /* Adjust layout for small screens */
+  /* Social Share Pages */
+  .social-share-pages {
+    gap: 15px;
+    margin: 30px 0;
+    /* Reduced icon size */
+  }
+
+  .social-share-pages a i {
+    font-size: 1.8em; /* Smaller icon size */
+  }
+
+  .social-share-pages a {
+    color: darkgoldenrod;
+  }
+
+  .social-share-pages a:hover {
+    color: darkred;
+    animation: vibrate 0.3s linear;
+  }
+
   .content-wrapper {
     flex-direction: column; /* Stack content and sidebar */
     gap: 20px; /* Reduce gap between content and sidebar */
@@ -1154,6 +1175,7 @@ body {
   }
 }
 
+/* Responsive design for screens smaller than 480px */
 @media (max-width: 480px) {
   .post-title-fullwidth {
     font-size: 40px;
@@ -1165,17 +1187,39 @@ body {
     font-size: 24px !important;
   }
 
+  /* Social Share Icons */
   .social-share {
     gap: 10px;
     margin: 20px 0;
+    /* Further reduced icon size */
   }
 
   .social-share a i {
-    font-size: 1.5em;
+    font-size: 1.2em; /* Even smaller icon size */
   }
 
   .social-share-title {
     font-size: 20px;
+  }
+
+  /* Social Share Pages */
+  .social-share-pages {
+    gap: 10px;
+    margin: 20px 0;
+    /* Further reduced icon size */
+  }
+
+  .social-share-pages a i {
+    font-size: 1.2em; /* Even smaller icon size */
+  }
+
+  .social-share-pages a {
+    color: darkgoldenrod;
+  }
+
+  .social-share-pages a:hover {
+    color: darkred;
+    animation: vibrate 0.3s linear;
   }
 
   /* Adjust font size of meta text for smaller screens */
@@ -1205,9 +1249,10 @@ body {
   animation: vibrate 0.3s linear;
 }
 
+/* Social share pages */
 .social-share-pages {
   display: flex;
-  gap: 30px;
+  gap: 15px;
   justify-content: center;
 }
 
