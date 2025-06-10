@@ -1113,7 +1113,7 @@ body {
 }
 
 /* Responsive design for screens smaller than 768px */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .post-title-fullwidth {
     font-size: 60px;
     margin-top: 70px;
@@ -1147,7 +1147,7 @@ body {
   }
 
   .social-share-pages a i {
-    font-size: 20px; /* Smaller icon size */
+    font-size: 15px; /* Smaller icon size */
   }
 
   .social-share-pages a {
