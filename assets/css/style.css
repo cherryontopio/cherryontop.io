@@ -1135,7 +1135,7 @@ body {
 
   .sidebar {
     flex: 1 1 auto;
-    max-width: 35%; /* Still wide but slightly narrower */
+    max-width: 33%; /* Still wide but slightly narrower */
     margin-top: 20px;
     align-self: center;
   }
