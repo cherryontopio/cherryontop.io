@@ -1123,19 +1123,20 @@ body {
   }
 
   .content-wrapper {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row; /* Arrange side by side */
     gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping if needed */
   }
 
   .blog-post {
-    flex: 1 1 auto;
-    max-width: 65%; /* Blog post slightly wider */
+    flex: 2 1 65%; /* Takes more space */
+    max-width: 70%; /* Optional limit */
   }
 
   .sidebar {
-    flex: 1 1 auto;
-    max-width: 30%; /* Still wide but slightly narrower */
-    margin-top: 20px;
+    flex: 1 1 30%; /* Takes less space */
+    max-width: 35%; /* Optional limit */
   }
 }
 
