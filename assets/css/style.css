@@ -1113,15 +1113,31 @@ body {
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
-  /* Styles for phones in landscape orientation */
   .social-share {
     gap: 15px;
     margin: 30px 0;
-    /* Reduced icon size */
   }
 
   .social-share a i {
-    font-size: 40px; /* Smaller icon size */
+    font-size: 40px;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .blog-post {
+    flex: 1 1 auto;
+    max-width: 65%; /* Blog post slightly wider */
+    align-self: center; /* Optional: centers the post nicely */
+  }
+
+  .sidebar {
+    flex: 1 1 auto;
+    max-width: 85%; /* Still wide but slightly narrower */
+    margin-top: 20px;
+    align-self: center;
   }
 }
 
