@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "The Psychology Behind Successful Branding, Content, and Visual Storytelling";
-$publishDate = '2025-06-12';
+$publishDate = '2025-06-10';
 $postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
