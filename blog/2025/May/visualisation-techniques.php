@@ -36,19 +36,17 @@ include dirname(__DIR__, 3) . '/includes/header.php';
             in
             <span class="post-categories">
               <a hidden href="/category/tech.php" class="post-category">tech</a>
-              <a hidden href="/category/digital.php" class="post-category"> digital </a>
-              <a href="/category/mindset.php" class="post-category"> mindset</a>
+              <a href="/category/digital.php" class="post-category"> digital </a>
+              <a hidden href="/category/mindset.php" class="post-category"> mindset</a>
               <a hidden href="/category/stories.php" class="post-category"> stories </a>
               <a hidden href="/category/travels.php" class="post-category"> travels</a>
               <a hidden href="/category/wordcraft.php" class="post-category"> wordcraft </a>
             </span>
           </p>
 
-
           <div class="post-content">
-            <?php include dirname(__DIR__, 4) . '/includes/social-share.php'; ?>
+            <?php include dirname(__DIR__, 3) . '/includes/social-share.php'; ?>
 
-            <p>
             <p>Visualization is a powerful mental practice where you imagine yourself succeeding in your goals. It activates the same neural networks in your brain that are triggered when you actually perform the action.</p>
             <p>This isn’t just wishful thinking. Studies have shown that visualization can improve performance in sports, academics, and even recovery from surgery.</p>
             <h2>Effective Visualization Steps</h2>
@@ -58,7 +56,7 @@ include dirname(__DIR__, 3) . '/includes/header.php';
               <li>Feel the success in your body — joy, confidence, excitement.</li>
             </ol>
             <p>Repeat this practice daily. Visualization pairs beautifully with affirmations for a double impact. Learn more about guided visualizations on <a href="https://www.mckenna.com/books/change-your-life-in-7-days" target="_blank">Paul McKenna’s resources</a>.</p>
-            </p>
+
             <h3 class="miniseries">Read more in my miniseries: </h3>
             <ol>
               <li>
@@ -100,13 +98,13 @@ include dirname(__DIR__, 3) . '/includes/header.php';
           <div>
           </div>
           <br>
-          <div class="divider"></div>
+          <div class=" divider">
+          </div>
           <div class="donate-link">
-            <?php include dirname(__DIR__, 4) . '/includes/paypal.php'; ?>
+            <?php include dirname(__DIR__, 3) . '/includes/paypal.php'; ?>
           </div>
 
         </article>
-
 
         <!-- Sidebar Section -->
         <?php include $_SERVER['DOCUMENT_ROOT'] . "/blog/sidebar.php"; ?>
@@ -114,16 +112,15 @@ include dirname(__DIR__, 3) . '/includes/header.php';
 
       <!-- FEATURED ITEMS SECTION -->
 
-      <?php include dirname(__DIR__, 4) . '/includes/featured-index-items.php'; ?>
+      <?php include dirname(__DIR__, 3) . '/includes/featured-index-items.php'; ?>
 
       <!-- FEATURED ITEMS END -->
-
 
     </main>
 
   </section>
   <?php
-  $footerPath = dirname(__DIR__, 4) . '/includes/footer.php';
+  $footerPath = dirname(__DIR__, 3) . '/includes/footer.php';
   if (file_exists($footerPath)) {
     include $footerPath;
   } else {

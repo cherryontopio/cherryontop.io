@@ -83,7 +83,11 @@ include dirname(__DIR__, 3) . '/includes/header.php';
             <h2>Conclusion</h2>
             <p>Strategic branding, AI-powered digital products, and immersive storytelling are rooted in human psychology. High-end clients seek brands that resonate with their aspirations, emotions, and subconscious motivations. Aligning your strategy with these psychological principles transforms your brand into the <strong>only choice</strong>.</p>
 
+            <h3 class="miniseries">Read more in my miniseries: </h3>
+            <ol>
+              <li><a href="/blog/2025/June/first-impressions-cognitive-bias.php">The Power of First Impressions & Cognitive Bias in Branding</a></li>
 
+            </ol>
 
             <br>
             <div class=" divider">

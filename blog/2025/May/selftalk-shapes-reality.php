@@ -43,11 +43,10 @@ include dirname(__DIR__, 3) . '/includes/header.php';
             </span>
           </p>
 
-
           <div class="post-content">
-            <?php include dirname(__DIR__, 4) . '/includes/social-share.php'; ?>
+            <?php include dirname(__DIR__, 3) . '/includes/social-share.php'; ?>
 
-            <p>
+
             <p>Our internal dialogue, or self-talk, plays a critical role in shaping our reality. If your self-talk is constantly negative, it reinforces self-doubt and fear. Positive self-talk, on the other hand, builds confidence and self-worth.</p>
             <p><strong>Louise Hay</strong> believed that affirmations — repeated positive statements — could heal mental and physical imbalances.</p>
             <h2>Examples of Positive Self-Talk</h2>
@@ -100,13 +99,13 @@ include dirname(__DIR__, 3) . '/includes/header.php';
           <div>
           </div>
           <br>
-          <div class="divider"></div>
+          <div class=" divider">
+          </div>
           <div class="donate-link">
-            <?php include dirname(__DIR__, 4) . '/includes/paypal.php'; ?>
+            <?php include dirname(__DIR__, 3) . '/includes/paypal.php'; ?>
           </div>
 
         </article>
-
 
         <!-- Sidebar Section -->
         <?php include $_SERVER['DOCUMENT_ROOT'] . "/blog/sidebar.php"; ?>
@@ -114,16 +113,15 @@ include dirname(__DIR__, 3) . '/includes/header.php';
 
       <!-- FEATURED ITEMS SECTION -->
 
-      <?php include dirname(__DIR__, 4) . '/includes/featured-index-items.php'; ?>
+      <?php include dirname(__DIR__, 3) . '/includes/featured-index-items.php'; ?>
 
       <!-- FEATURED ITEMS END -->
-
 
     </main>
 
   </section>
   <?php
-  $footerPath = dirname(__DIR__, 4) . '/includes/footer.php';
+  $footerPath = dirname(__DIR__, 3) . '/includes/footer.php';
   if (file_exists($footerPath)) {
     include $footerPath;
   } else {

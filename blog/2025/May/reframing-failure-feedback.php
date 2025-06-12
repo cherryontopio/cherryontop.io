@@ -35,17 +35,16 @@ include dirname(__DIR__, 3) . '/includes/header.php';
             in
             <span class="post-categories">
               <a hidden href="/category/tech.php" class="post-category">tech</a>
-              <a hidden href="/category/digital.php" class="post-category"> digital </a>
-              <a href="/category/mindset.php" class="post-category"> mindset</a>
+              <a href="/category/digital.php" class="post-category"> digital </a>
+              <a hidden href="/category/mindset.php" class="post-category"> mindset</a>
               <a hidden href="/category/stories.php" class="post-category"> stories </a>
               <a hidden href="/category/travels.php" class="post-category"> travels</a>
               <a hidden href="/category/wordcraft.php" class="post-category"> wordcraft </a>
             </span>
           </p>
 
-
           <div class="post-content">
-            <?php include dirname(__DIR__, 4) . '/includes/social-share.php'; ?>
+            <?php include dirname(__DIR__, 3) . '/includes/social-share.php'; ?>
 
             <p>
             <p>Failure is not the opposite of success — it's a part of it. Every successful person has faced setbacks, and what separates them is how they respond. When we reframe failure as feedback, we can extract lessons and move forward stronger.</p>
@@ -100,13 +99,13 @@ include dirname(__DIR__, 3) . '/includes/header.php';
           <div>
           </div>
           <br>
-          <div class="divider"></div>
+          <div class=" divider">
+          </div>
           <div class="donate-link">
-            <?php include dirname(__DIR__, 4) . '/includes/paypal.php'; ?>
+            <?php include dirname(__DIR__, 3) . '/includes/paypal.php'; ?>
           </div>
 
         </article>
-
 
         <!-- Sidebar Section -->
         <?php include $_SERVER['DOCUMENT_ROOT'] . "/blog/sidebar.php"; ?>
@@ -114,16 +113,15 @@ include dirname(__DIR__, 3) . '/includes/header.php';
 
       <!-- FEATURED ITEMS SECTION -->
 
-      <?php include dirname(__DIR__, 4) . '/includes/featured-index-items.php'; ?>
+      <?php include dirname(__DIR__, 3) . '/includes/featured-index-items.php'; ?>
 
       <!-- FEATURED ITEMS END -->
-
 
     </main>
 
   </section>
   <?php
-  $footerPath = dirname(__DIR__, 4) . '/includes/footer.php';
+  $footerPath = dirname(__DIR__, 3) . '/includes/footer.php';
   if (file_exists($footerPath)) {
     include $footerPath;
   } else {
