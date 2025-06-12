@@ -34,11 +34,11 @@ include dirname(__DIR__, 3) . '/includes/header.php';
             in
             <span class="post-categories">
               <a hidden href="/category/tech.php" class="post-category">tech</a>
-              <a hidden href="/category/digital.php" class="post-category"> digital </a>
-              <a href="/category/mindset.php" class="post-category"> mindset</a>
-              <a hidden href="/category/stories.php" class="post-category"> stories </a>
-              <a hidden href="/category/travels.php" class="post-category"> travels</a>
-              <a hidden href="/category/wordcraft.php" class="post-category"> wordcraft </a>
+              <a hidden href="/category/digital.php" class="post-category">digital</a>
+              <a href="/category/mindset.php" class="post-category">mindset</a>
+              <a hidden href="/category/stories.php" class="post-category">stories</a>
+              <a hidden href="/category/travels.php" class="post-category">travels</a>
+              <a hidden href="/category/wordcraft.php" class="post-category">wordcraft</a>
             </span>
           </p>
 
