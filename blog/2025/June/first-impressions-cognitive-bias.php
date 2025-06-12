@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "The Power of First Impressions & Cognitive Bias in Branding";
-$publishDate = '2025-06-10';
+$publishDate = '2025-06-12';
 $postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
@@ -78,7 +78,10 @@ include dirname(__DIR__, 3) . '/includes/header.php';
             <h3 class="miniseries">Read more in my miniseries: </h3>
             <ol>
               <li><a href="/blog/2025/June/psychology-branding-content-visual-storytelling.php">The Psychology Behind Successful Branding, Content, and Visual Storytelling</a></li>
-
+              <li><a href="/blog/2025/June/first-impressions-cognitive-bias.php">The Power of First Impressions & Cognitive Bias in Branding</a></li>
+              <li><a href="/blog/2025/June/emotional-connection-storytelling-branding.php">Emotional Connection & Storytelling Psychology in Branding</a></li>
+              <li><a href="/blog/2025/June/persuasion-techniques-behavioral-triggers-branding.php">Persuasion Techniques & Behavioral Triggers in Branding</a></li>
+              <li><a href="/blog/2025/June/visual-storytelling-symbolic-messaging-branding.php">Visual Storytelling & Symbolic Messaging in Branding</a></li>
             </ol>
 
             <br>

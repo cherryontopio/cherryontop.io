@@ -101,7 +101,7 @@
 
     <?php if (!empty($allPosts)): ?>
       <ul>
-        <?php foreach (array_slice($allPosts, 0, 20) as $post): ?>
+        <?php foreach (array_slice($allPosts, 0, 10) as $post): ?>
           <li>
             <a href="<?= htmlspecialchars($post['link']) ?>">
               <?= htmlspecialchars($post['title']) ?>
