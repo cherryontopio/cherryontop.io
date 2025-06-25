@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "How to Capture Your Webpage Visitor's Attention & Keep Them Engaged";
+$pageTitle = "Hook, Hold, Convert: Mastering Visitor Engagement";
 $publishDate = '2025-06-25';
 $postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
