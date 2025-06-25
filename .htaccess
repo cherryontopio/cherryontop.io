@@ -9,3 +9,5 @@ RewriteRule ^tags/([^/]+)$ tags.php?tag=$1 [L,QSA]
 
 Redirect 301 /resume.html /resume.php
 Redirect 301 /resume /resume.php
+
+RewriteRule ^services$ /services.php [L]
