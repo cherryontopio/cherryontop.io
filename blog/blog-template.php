@@ -1,17 +1,8 @@
 <?php
+$pageTitle = "ARTICLE TITLE";
+$publishDate = '2025-06-26';
+$postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
-
-// Format the publish date if it exists
-if (!empty($publishDate)) {
-  $postPublishDate = date('F j, Y', strtotime($publishDate));
-} else {
-  $postPublishDate = 'Unknown date';
-}
-
-// Set a default title if not already set
-if (!isset($pageTitle)) {
-  $pageTitle = "Blog Post";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +10,7 @@ if (!isset($pageTitle)) {
 <head>
   <meta charset="UTF-8">
   <title><?php echo htmlspecialchars($pageTitle); ?></title>
+  <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
 <body>
