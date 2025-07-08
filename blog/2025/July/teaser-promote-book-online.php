@@ -107,8 +107,27 @@ include dirname(__DIR__, 3) . '/includes/header.php';
 
           <br>
           <div class="divider"></div>
-          <div class="subscription-divider">
-            <?php include dirname(__DIR__, 3) . '/includes/subscription-widget.php'; ?>
+
+          <div class="subscription-widget">
+            <div>
+              <h2 class="subs-text">Yes, sign me up for course pre-launch!</h2>
+              <div class="logo-name" style="display: none;">
+                <div class="subs-logo">
+                  <img class="subs-img logo" src="/assets/images/favicon.webp" alt="Cherry on Top Logo">
+                </div>
+                <div class="subs-name">
+                  <span class="subs-brand-name">on top .io</span>
+                </div>
+              </div>
+
+              <form id="subscription-form" action="/includes/subscribe.php" method="POST" autocomplete="on">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
+                <button type="submit">Subscribe</button>
+              </form>
+
+              <div id="subscription-message" style="margin-top:10px; color: #333;"></div>
+
+            </div>
           </div>
         </article>
 
