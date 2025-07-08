@@ -1,17 +1,28 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect and sanitize input
-    $name = filter_var(trim($_POST["name"]), FILTER_SANITIZE_STRING);
+    $name = filter_var(trim($_POST["name"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $message = filter_var(trim($_POST["message"]), FILTER_SANITIZE_STRING);
+    $message = htmlspecialchars(trim($_POST["message"])); // Prevent XSS
 
     // Validate required fields
-    if (empty($name) || empty($email) || empty($message)) {
+    if (empty($name)) {
         http_response_code(400);
-        echo "Please complete all fields.";
+        echo "Name is required.";
+        exit;
+    }
+    if (empty($email)) {
+        http_response_code(400);
+        echo "Email is required.";
+        exit;
+    }
+    if (empty($message)) {
+        http_response_code(400);
+        echo "Message is required.";
         exit;
     }
 
+    // Validate email address
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         http_response_code(400);
         echo "Invalid email address.";
@@ -52,4 +63,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     http_response_code(403);
     echo "There was a problem with your submission, please try again.";
 }
-?>

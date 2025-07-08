@@ -1,9 +1,10 @@
 <?php
 $navLinks = [
   ['label' => 'Home', 'href' => '/index.php'],
-  ['label' => 'About', 'href' => '/about.php'],
   ['label' => 'Services', 'href' => '/services.php'],
-  ['label' => 'Contact', 'href' => '/contact.php']
+  ['label' => 'Contact', 'href' => '/contact.php'],
+  ['label' => 'About', 'href' => '/about.php'],
+
 ];
 
 // Get the current URL path (e.g., "/about.php")
