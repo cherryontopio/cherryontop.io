@@ -854,6 +854,21 @@ body {
 
 /* CONTACT WHATSAPP END */
 
+/* CONTACT LINKEDIN */
+.linkedin-divider {
+  background-color: rgba(225, 225, 225, 0.4);
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 70px 0;
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTACT LINKEDIN  END */
+
 /* BLOG POST */
 /* Global styles */
 * {

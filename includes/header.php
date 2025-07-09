@@ -1,10 +1,9 @@
 <?php
 $navLinks = [
-  ['label' => 'Home', 'href' => '/index.php'],
-  ['label' => 'Services', 'href' => '/services.php'],
-  ['label' => 'Contact', 'href' => '/contact.php'],
-  ['label' => 'About', 'href' => '/about.php'],
-
+  ['label' => 'Home', 'href' => '/'],
+  ['label' => 'Courses', 'href' => '/courses'],
+  ['label' => 'Services', 'href' => '/services'],
+  ['label' => 'Contact', 'href' => '/contact'],
 ];
 
 // Get the current URL path (e.g., "/about.php")
@@ -17,7 +16,7 @@ echo '
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Travel adventures of a tech writer, exploring storytelling and life experiences through the lens of technology and travel." />
+    <meta name="description" content="Helping authors promote their books online & become best-sellers. Creator of “How to Promote Your Book Online.”" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/header.css" />
     <link rel="stylesheet" href="/assets/css/footer.css" />

@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Course Pre-Launch";
-$publishDate = '2025-07-08';
+$pageTitle = "How to Promote Your Book";
+$publishDate = '2025-07-09';
 $postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
@@ -27,7 +27,7 @@ include dirname(__DIR__, 3) . '/includes/header.php';
         <article class="blog-post">
 
           <img src="/assets/images/book-promotion.webp" alt="promoting stand in a bookstore" class="post-image" />
-          <h3 class="blog-subtitle">How to Promote Your Book Online</h3>
+          <h3 class="blog-subtitle">BECOME A BEST-SELLING AUTHOR: COURSE PRE-LAUNCH!</h3>
 
           <!-- Dynamic publish date -->
           <p class="post-meta">
@@ -39,9 +39,9 @@ include dirname(__DIR__, 3) . '/includes/header.php';
             in
             <span class="post-categories">
               <a hidden href="/category/tech.php" class="post-category">tech</a>
-              <a hidden href="/category/digital.php" class="post-category">digital</a>
-              <a hidden href="/category/mindset.php" class="post-category">mindset</a>
-              <a hidden href="/category/stories.php" class="post-category">stories</a>
+              <a href="/category/digital.php" class="post-category">digital</a>
+              <a href="/category/mindset.php" class="post-category">mindset</a>
+              <a href="/category/stories.php" class="post-category">stories</a>
               <a hidden href="/category/travels.php" class="post-category">travels</a>
               <a href="/category/wordcraft.php" class="post-category">wordcraft</a>
             </span>
@@ -94,7 +94,7 @@ include dirname(__DIR__, 3) . '/includes/header.php';
 
             <h3>How to Get Involved</h3>
             <p>It’s simple! Just click the button below to join the pre-launch list. When the course opens, you’ll be the first to know — and you’ll be ready to hit the ground running!</p>
-            <p>Sign up for the Pre-Launch below!</p>
+            <a href="/courses/how-to-promote-book-online.php"><button style="background-color: darkred; font-size: 30px; font-weight: 600; padding: 20px 30px; border-radius: 10px; color: white; border: none;">Sign up for the Pre-Launch!</button></a>
 
 
             <h2>Let’s Do This!</h2>
@@ -108,14 +108,10 @@ include dirname(__DIR__, 3) . '/includes/header.php';
           <br>
           <div class="divider"></div>
 
-          <div class="subscription-divider">
-            <?php include dirname(__DIR__, 3) . '/includes/subscription-widget.php'; ?>
-          </div>
-      </div>
-      </article>
+        </article>
 
-      <!-- Sidebar Section -->
-      <?php include $_SERVER['DOCUMENT_ROOT'] . "/blog/sidebar.php"; ?>
+        <!-- Sidebar Section -->
+        <?php include $_SERVER['DOCUMENT_ROOT'] . "/blog/sidebar.php"; ?>
       </div>
 
       <!-- Featured Items -->

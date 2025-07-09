@@ -1,13 +1,25 @@
+# Enable URL rewriting
 RewriteEngine On
+
+# Exclude /includes/ folder from rewrite rules
+RewriteCond %{REQUEST_URI} ^/includes/ [NC]
+RewriteRule .* - [L]
 
 # Redirect index.php to the root domain
 RewriteCond %{THE_REQUEST} /index\.php [NC]
 RewriteRule ^index\.php$ / [R=301,L]
 
-# SEO-friendly tags URL
+# Redirect top-level .php URLs to clean versions (e.g. /about.php → /about)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^.\/]+)\.php [NC]
+RewriteRule ^([^/]+)\.php$ /$1 [R=301,L]
+
+# Internally rewrite clean top-level URLs to .php (e.g. /about → about.php)
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# SEO-friendly tags URL (e.g. /tags/design → tags.php?tag=design)
 RewriteRule ^tags/([^/]+)$ tags.php?tag=$1 [L,QSA]
 
+# Redirect old resume URLs to resume.php
 Redirect 301 /resume.html /resume.php
 Redirect 301 /resume /resume.php
-
-RewriteRule ^services$ /services.php [L]

@@ -37,9 +37,15 @@ if (file_exists($headerPath)) {
 
 
     </main>
-    <div class="subscription-divider">
-        <?php include 'includes/subscription-widget.php'; ?>
+<div class="linkedin-divider">
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="yvett-c" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://uk.linkedin.com/in/yvett-c?trk=profile-badge">Yvette</div>
+
     </div>
+
+    <!-- Place this before </body> -->
+
+
+
     <?php
     if (file_exists('includes/contact-whatsapp.php')) {
         include 'includes/contact-whatsapp.php';
@@ -50,6 +56,7 @@ if (file_exists($headerPath)) {
 
 
     <?php include 'includes/footer.php'; ?>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 
 </html>
