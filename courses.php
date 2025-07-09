@@ -218,17 +218,20 @@ if (file_exists($headerPath)) {
     <div class="promo-wrapper">
 
         <!-- Hero Section -->
+        <section style="margin-top: 200px; padding-bottom: 80px; color: darkred;">
+            <h2>COURSE PRE-LAUNCH!</h2>
+        </section>
 
-        <section style="background-color: #f1f1f1; margin-top: 200px;">
+        <section style="background-color: #f1f1f1; padding: 80px 0 80px 0;">
 
-            <h2>Course Pre-Launch</h2>
+
             <h1>How to Promote Your Book Online</h1>
             <p>A step-by-step course to help authors build visibility, grow their audience, and confidently market their books—without overwhelm.</p>
             <img src="/assets/images/promo-pic.webp" alt="Book Promotion Course">
         </section>
 
         <!-- Signup Form Section -->
-        <section style="background-color: #ffffff;">
+        <section style="background-color: #ffffff; padding: 80px 0;">
             <h2>📬 Be the First to Know</h2>
             <p>Join the waitlist and get exclusive early access, launch bonuses, and a sneak peek inside the course.</p>
 
@@ -256,7 +259,7 @@ if (file_exists($headerPath)) {
 
 
         <!-- Bonus Section -->
-        <section style="background-color: #f1f1f1;">
+        <section style="background-color: #f1f1f1; padding: 80px 0;">
             <h3>🎁 Prelaunch Perks</h3>
             <ul>
                 <li>✔️ Early bird pricing</li>
