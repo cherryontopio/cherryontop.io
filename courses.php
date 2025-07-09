@@ -34,6 +34,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 }
+// Set the page title dynamically based on the current script name
+$pageTitle = basename(__FILE__, '.php') === 'index' ? "Welcome to My Website" : "Contact";
+
+// Define the correct path to the header file
+$headerPath = __DIR__ . '/includes/header.php';
+
+// Check if the header file exists before including it
+if (file_exists($headerPath)) {
+    include $headerPath;
+} else {
+    echo "<p style='color: red;'>Error: Header file not found!</p>";
+}
 ?>
 
 
