@@ -4,10 +4,20 @@ RewriteEngine On
 RewriteCond %{THE_REQUEST} /index\.php [NC]
 RewriteRule ^index\.php$ / [R=301,L]
 
+# Redirect all .php URLs to clean URLs (e.g., /about.php → /about)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^(.+)\.php$ /$1 [R=301,L]
+
+# Internally rewrite clean URLs to .php files (e.g., /about → about.php)
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)$ $1.php [L]
+
 # SEO-friendly tags URL
 RewriteRule ^tags/([^/]+)$ tags.php?tag=$1 [L,QSA]
 
+# Redirect specific URLs
 Redirect 301 /resume.html /resume.php
 Redirect 301 /resume /resume.php
 
+# Internal rewrite for /services
 RewriteRule ^services$ /services.php [L]

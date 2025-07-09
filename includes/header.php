@@ -27,7 +27,7 @@ echo '
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 
-    <title>cherryontop.io - Stories by a CoderCat: Cherry-Picked and Bug-Free</title>
+    <title>cherryontop.io - Smart Branding, Dynamic Websites, Scalable Products</title>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PGB0DRX2H"></script>
