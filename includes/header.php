@@ -1,12 +1,11 @@
 <?php
 $navLinks = [
-  ['label' => 'Home', 'href' => '/index.php'],
-  ['label' => 'Course Pre-Launch', 'href' => '/courses.php'],
-  ['label' => 'Services', 'href' => '/services.php'],
-  ['label' => 'Contact', 'href' => '/contact.php'],
-
-
+  ['label' => 'Home', 'href' => '/'],
+  ['label' => 'Services', 'href' => '/services'],
+  ['label' => 'Contact', 'href' => '/contact'],
+  ['label' => 'About', 'href' => '/about'],
 ];
+
 
 // Get the current URL path (e.g., "/about.php")
 $currentPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
