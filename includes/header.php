@@ -1,9 +1,10 @@
 <?php
 $navLinks = [
   ['label' => 'Home', 'href' => '/index.php'],
+  ['label' => 'Course Pre-Launch', 'href' => '/courses.php'],
   ['label' => 'Services', 'href' => '/services.php'],
   ['label' => 'Contact', 'href' => '/contact.php'],
-  ['label' => 'About', 'href' => '/about.php'],
+
 
 ];
 
