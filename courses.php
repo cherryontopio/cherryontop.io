@@ -214,7 +214,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <div class="logo-text">on top.io</div>
                 </div>
             </a>
-            <h2>Course Pre-Launch</h2>
+
             <h1>How to Promote Your Book Online</h1>
             <p>A step-by-step course to help authors build visibility, grow their audience, and confidently market their books—without overwhelm.</p>
             <img src="/assets/images/promo-pic.webp" alt="Book Promotion Course">

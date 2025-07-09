@@ -16,7 +16,7 @@ echo '
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Helping authors promote their books online & become best-sellers. Creator of “How to Promote Your Book Online.”" />
+    <meta name="description" content="Travel adventures of a tech writer, exploring storytelling and life experiences through the lens of technology and travel." />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/header.css" />
     <link rel="stylesheet" href="/assets/css/footer.css" />

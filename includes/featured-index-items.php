@@ -2,6 +2,24 @@
 // Define the featured posts array with a date field
 $featured_posts = [
     [
+        'image' => '/assets/images/promo-pic.webp',
+        'alt' => 'how to become a best-selling author landing page',
+        'title' => 'Course Sign Up: How to Promote Your Book Online',
+        'link' => '/courses/how-to-promote-book-online.php',
+        'date' => '2025-07-09',
+        'description' => '',
+        'post_count' => '',
+    ],
+    [
+        'image' => '/assets/images/promo-pic.webp',
+        'alt' => 'how to become a best-selling author landing page',
+        'title' => 'Course Teaser: Book Promotion',
+        'link' => '/blog/2025/July/teaser-promote-book-online.php',
+        'date' => '2025-07-09',
+        'description' => '',
+        'post_count' => '',
+    ],
+    [
         'image' => '/assets/images/website-management.webp',
         'alt' => 'cherryontop.io homepage',
         'title' => 'Hire a Human Web Admin',
@@ -46,14 +64,6 @@ $featured_posts = [
         'date' => '2025-05-14'
     ],
     [
-        'image' => '/assets/images/Boothe-as-Marlowe.webp',
-        'alt' => 'Powers Boothe as Philip Marlowe, PI',
-        'title' => 'The Wit of R. Chandler',
-        'link' => '/blog/2025/May/raymond-chandler-quotes.php',
-        "description" => "From The Man Who Defined a Genre",
-        'date' => '2025-05-13'
-    ],
-    [
         'image' => '/assets/images/writers-toolbox.webp',
         'alt' => 'writers tools',
         'title' => 'The Skills Every Writer Needs',
@@ -71,54 +81,7 @@ $featured_posts = [
         'date' => '2025-05-13',
         'hidden' => true,
     ],
-    [
-        'image' => '/assets/images/communication-skills.webp',
-        'alt' => 'man shouting into an amplifier',
-        'title' => 'The Skills No Developer Can Do Without',
-        'link' => '/blog/2025/May/skills-no-developer-can-do-without.php',
-        "description" => "Being a web developer isn’t just about smashing code until the browser behaves.",
-        'date' => '2025-05-13'
-    ],
-    [
-        "image" => "/assets/images/coding-mobile-app.webp",
-        "alt" => "Laptop with code and mobile app",
-        "title" => "Web Design vs Web Development",
-        "link" => "/blog/2025/May/web-design-development.php",
-        "description" => "In today’s digital world, the terms web design and web development are often used interchangeably.",
-        "date" => "2025-05-02"
-    ],
-    [
-        "image" => "/assets/images/laughing-spring.webp",
-        "alt" => "yellow spring laughing",
-        "title" => "Will AI Ever Be Sarcastic?",
-        "link" => "/blog/2025/May/ai-humor-sarcastic.php",
-        "description" => "Pondering about the future: Will AI ever be like a good-humoured grandpa to us?",
-        "date" => "2025-05-01"
-    ],
-    [
-        "image" => "/assets/images/coffee-art.webp",
-        "alt" => "coffee being poured into a cup with coffee art",
-        "title" => "From Café Assistant to Software Developer",
-        "link" => "/blog/2025/May/cafe-assistant-software-developer-success-story.php",
-        "description" => "A personal journey from working as a café assistant to becoming a software developer...",
-        "date" => "2025-05-04"
-    ],
-    [
-        "image" => "/assets/images/passport-hat.webp",
-        "alt" => "a passport and a hat positioned on a map",
-        "title" => "The Stories of the Imperfect Perfectionist",
-        "link" => "/blog/2025/May/imperfect-perfectionist-stories.php",
-        "description" => "I set out with a promise to myself — to write about the places I visited every day.",
-        "date" => "2025-05-05"
-    ],
-    [
-        "image" => "/assets/images/bristol.webp",
-        "alt" => "Bristol landscape",
-        "title" => "Bristol Stole My Heart",
-        "link" => "/blog/2025/May/bristol-creativity-cider-views.php",
-        "description" => "Bristol is a vibrant town sitting in the southwest of England,...",
-        "date" => "2025-05-01"
-    ]
+
 ];
 
 // Sort posts by date (newest first)
