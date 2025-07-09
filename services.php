@@ -19,7 +19,7 @@ if (file_exists($headerPath)) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Travel adventures of a tech writer, exploring storytelling and life experiences through the lens of technology and travel." />
+  <meta name="description" content="Smart Branding, Dynamic Websites, Scalable Products" />
   <link rel="stylesheet" href="style-pages.css" />
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/WebP" href="/assets/images/favicon.WebP" />
@@ -69,19 +69,45 @@ if (file_exists($headerPath)) {
       <span class="highlight" data-tooltip="Let’s shape a brand, a website, and a product that works as hard as you do."> It’s time to create something extraordinary.</span>
     </p>
 
+    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="iveta-c" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://uk.linkedin.com/in/iveta-c?trk=profile-badge"></a></div>
+
   </main>
 
   <div class="subscription-divider">
     <?php include 'includes/subscription-widget.php'; ?>
   </div>
+
+
+
+
+
+
+  </div>
+
   <div class="featured-posts">
     <h3 class="title-fullwidth">Why you should hire me</h3>
+
     <?php include 'includes/featured-posts.php'; ?>
   </div>
 
+  <div class="linkedin-divider">
+    <div class="linkedin-wrapper">
+      <div class="badge-base LI-profile-badge"
+        data-locale="en_US"
+        data-size="large"
+        data-theme="dark"
+        data-type="HORIZONTAL"
+        data-vanity="yvett-c"
+        data-version="v1">
+        <a class="badge-base__link LI-simple-link" href="https://uk.linkedin.com/in/yvett-c?trk=profile-badge"></a>
+      </div>
+    </div>
+  </div>
+
+
   <?php include 'includes/footer.php'; ?>
 
-
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 
 </html>
