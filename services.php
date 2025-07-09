@@ -90,24 +90,12 @@ if (file_exists($headerPath)) {
     <?php include 'includes/featured-posts.php'; ?>
   </div>
 
-  <div class="linkedin-divider">
-    <div class="linkedin-wrapper">
-      <div class="badge-base LI-profile-badge"
-        data-locale="en_US"
-        data-size="large"
-        data-theme="dark"
-        data-type="HORIZONTAL"
-        data-vanity="yvett-c"
-        data-version="v1">
-        <a class="badge-base__link LI-simple-link" href="https://uk.linkedin.com/in/yvett-c?trk=profile-badge"></a>
-      </div>
-    </div>
-  </div>
+
 
 
   <?php include 'includes/footer.php'; ?>
 
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
 </body>
 
 </html>
