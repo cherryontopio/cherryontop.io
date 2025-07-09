@@ -219,14 +219,9 @@ if (file_exists($headerPath)) {
 
         <!-- Hero Section -->
 
-        <section style="background-color: #f1f1f1;">
-            <a href="https://cherryontop.io">
-                <div id="promo-logo">
-                    <img src="/assets/images/favicon.webp" alt="cherryontop.io logo">
-                    <div class="logo-text">on top.io</div>
-                </div>
-            </a>
+        <section style="background-color: #f1f1f1; margin-top: 200px;">
 
+            <h2>Course Pre-Launch</h2>
             <h1>How to Promote Your Book Online</h1>
             <p>A step-by-step course to help authors build visibility, grow their audience, and confidently market their books—without overwhelm.</p>
             <img src="/assets/images/promo-pic.webp" alt="Book Promotion Course">
