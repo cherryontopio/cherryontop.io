@@ -38,7 +38,7 @@ if (file_exists($headerPath)) {
 
     </main>
     <div class="linkedin-divider">
-        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="yvett-c" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://uk.linkedin.com/in/yvett-c?trk=profile-badge">Yvette C</a></div>
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="yvett-c" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://uk.linkedin.com/in/yvett-c?trk=profile-badge"></div>
 
     </div>
 
