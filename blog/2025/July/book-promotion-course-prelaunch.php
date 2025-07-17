@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "How to Promote Your Book";
-$publishDate = '2025-07-09';
+$pageTitle = "Book Promotion Pre-Launch";
+$publishDate = '2025-07-15';
 $postPublishDate = date('F j, Y', strtotime($publishDate));
 include dirname(__DIR__, 3) . '/includes/header.php';
 ?>
